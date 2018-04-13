@@ -4,6 +4,7 @@
 header.row {
   display: flex;
   align: center;
+  background-color: #414147;
 }
 header nav {
   display: flex;
