@@ -8,6 +8,8 @@ header {
 header .row {
   display: flex;
   align: center;
+}
+header .container{
   background-color: #414147;
 }
 header nav {
