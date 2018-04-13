@@ -1,3 +1,7 @@
+header.row {
+  display: flex;
+  align: center;
+}
 h1 {
   color: red;
 }
