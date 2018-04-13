@@ -11,6 +11,8 @@ header .row {
 }
 header .container{
   background-color: #414147;
+  background-size: cover;
+  height: 100px;
 }
 header nav {
   display: flex;
