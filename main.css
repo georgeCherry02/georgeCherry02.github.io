@@ -8,11 +8,8 @@ header {
 header .row {
   display: flex;
   align: center;
-}
-header .container{
-  background-color: #414147;
+  background-color: #313137;
   background-size: cover;
-  height: 100px;
 }
 header nav {
   display: flex;
