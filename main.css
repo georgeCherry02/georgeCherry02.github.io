@@ -8,9 +8,10 @@ header {
 header .row {
   display: flex;
   align: center;
-  background-color: #313137;
-  background-size: cover;
 }
+header .partA {
+  background-color: #313137;
+  background-size: auto;
 header nav {
   display: flex;
   justify-content: flex-end;
