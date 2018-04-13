@@ -5,7 +5,7 @@
 header {
   padding: 20px;
 }
-header.row {
+header .row {
   display: flex;
   align: center;
   background-color: #414147;
