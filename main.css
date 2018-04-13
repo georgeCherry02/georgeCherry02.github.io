@@ -22,3 +22,11 @@ header h1 {
   font-weight: 700;
   margin: 0;
 }
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-color: #a0a0a4;
+  background-size: cover;
+  color: #ffffff;
+  height: 500px;
+}
