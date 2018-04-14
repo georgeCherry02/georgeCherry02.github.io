@@ -21,6 +21,10 @@ header h1 {
 #linkInt .container .row h4 {
   padding: 20;
 }
+#links {
+  display: flex;
+  background-color: #a0a0a4;
+  background-size: cover;
 {
   align: center;
   justify: center;
