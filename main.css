@@ -1,9 +1,14 @@
+footer {
+  display: flex;
+  width: 100%
+  position: relative;
+  background-color: #bbb;
+  background-size: cover;
+  align: center;
+}
 * {
   font-weight: 300px;
   color: black;
-  background-color: #bbb;
-  background-size: cover;
-  z-index: 1;
 }
 header {
   display: flex;
