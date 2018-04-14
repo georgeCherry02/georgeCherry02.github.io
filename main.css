@@ -23,7 +23,7 @@ header h1 {
 #linkInt h2 {
   padding: 20px;
 }
-#links {
+#links .imagelinks{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
