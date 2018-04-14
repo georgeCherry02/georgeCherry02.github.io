@@ -13,8 +13,23 @@ header {
 header h1 {
   font-weight: 700;
 }
-#links {
+#linkInt{
   display: flex;
   background-color: #a0a0a4;
   background-size: cover;
+}
+#linkInt .container .row h4 {
+  padding: 20;
+}
+{
+  align: center;
+  justify: center;
+}
+.imagelinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.icon {
+  padding: 20px;
 }
