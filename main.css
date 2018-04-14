@@ -8,6 +8,7 @@ header {
   position: fixed;
   background-color: #616167;
   background-size: cover;
+  align: center;
 }
 header h1 {
   font-weight: 700;
