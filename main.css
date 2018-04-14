@@ -1,6 +1,8 @@
 * {
   font-weight: 300px;
   color: black;
+  background-color: #bbb;
+  background-size: cover;
 }
 header {
   display: flex;
