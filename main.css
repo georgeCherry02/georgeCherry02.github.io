@@ -6,7 +6,7 @@ header {
   display: flex;
   width: 100%
   position: fixed;
-  background-color: #616167;
+  background-color: #a0a0a4;
   background-size: cover;
   align: center;
 }
@@ -15,7 +15,7 @@ header h1 {
 }
 #linkInt{
   display: flex;
-  background-color: #a0a0a4;
+  background-color: #bbb;
   background-size: cover;
 }
 #linkInt .container .row h4 {
@@ -23,7 +23,7 @@ header h1 {
 }
 #links {
   display: flex;
-  background-color: #a0a0a4;
+  background-color: #bbb;
   background-size: cover;
 {
   align: center;
