@@ -26,7 +26,7 @@ header h1 {
 #links .imagelinks{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: #bbb;
   background-size: cover;
 }
