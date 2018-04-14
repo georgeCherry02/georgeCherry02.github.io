@@ -1,5 +1,8 @@
 html {
   height: 100%
+  background-color: #bbb;
+  background-size:cover;
+  z-index: 1;
 }
 * {
   font-weight: 300px;
@@ -14,6 +17,7 @@ header {
   background-color: #a0a0a4;
   background-size: cover;
   align: center;
+  z-index: 10;
 }
 header h1 {
   font-weight: 700;
