@@ -15,7 +15,7 @@ header {
 header h1 {
   font-weight: 700;
 }
-section {
+section .a {
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,4 +23,5 @@ section {
   background-color: #a0a0a4;
   background-size: cover;
   color: #ffffff;
+  width: 100%;
 }
