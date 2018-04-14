@@ -3,14 +3,14 @@
   color: black;
 }
 header {
+  margin: 0;
+  padding: 0;
+  border: 0;
   display: flex;
   width: 100%;
   position: fixed;
   background-color: #616167;
   background-size: cover;
-  padding: 0;
-  margin: 0;
-  border: 0;
 }
 header h1 {
   font-weight: 700;
@@ -20,8 +20,7 @@ section {
   padding: 0;
   border: 0;
   display: flex;
+  width: 100%;
   background-color: #a0a0a4;
   background-size: cover;
-  color: #ffffff;
-  width: 100%;
 }
