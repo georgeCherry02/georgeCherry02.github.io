@@ -37,6 +37,8 @@
         function newFloor() {
           nfloor ++;
           window.alert(nfloor);
+          var initContA = document.getElementById('building').innerHTML;
+          document.getElementById('building').innerHTML = initContA + '<div class='floor'></div>';
         }
       </script>
     </section>    
