@@ -7,14 +7,14 @@
   </head>  
   <body>
   
-    <button onClick="makeButton()" style="background-color:green;">Make Button</button>
+    <button onClick="makeButton()" style="background-color:blue;">Make Button</button>
     
     <div id="Buttons"></div>
     
     <script>
       function makeButton() {
         var initCont = document.getElementById('Buttons').innerHTML;
-        initCont = initCont + 'a'; 
+        document.getElementById('Buttons').innerHTML = initCont + 'a';
       }
     </script>
     
