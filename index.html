@@ -20,9 +20,10 @@
         var initCont = document.getElementById('Buttons').innerHTML;
         document.getElementById('Buttons').innerHTML = initCont + '<div class="box"></div>';
         nbutton ++;
-        window.alert(nbutton);
       }
-      
+      if (nbutton==10) {
+        window.alert('You have made 10 buttons');
+      }      
     </script>
     
   </body>
