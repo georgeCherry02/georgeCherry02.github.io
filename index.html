@@ -7,16 +7,22 @@
     
   </head>  
   <body>
+    
+    <p>a</p>
   
     <button onClick="makeButton()">Make Button</button>
     
     <div id="Buttons"></div>
     
     <script>
+      var nbutton = 0;
       function makeButton() {
         var initCont = document.getElementById('Buttons').innerHTML;
         document.getElementById('Buttons').innerHTML = initCont + '<div class="box"></div>';
+        nbutton ++;
+        window.alert(nbutton);
       }
+      
     </script>
     
   </body>
