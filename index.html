@@ -8,7 +8,6 @@
     border-radius: 5px;
   }
   .floor {
-    width: 100%;
     height: 50px;
     background-color: blue;
     border: 1px solid red;
@@ -21,7 +20,7 @@
     
   </head>  
   <body>
-    <p>i</p>
+    <p>j</p>
     
     <section class='gui'>
       <button onClick="newFloor()" class="newFloor">
@@ -37,7 +36,7 @@
         function newFloor() {
           nfloor ++;
           window.alert(nfloor);
-          document.getElementById('building').innerHTML = '<div class='floor'></div>';
+          document.getElementById('building').innerHTML = '<div class='floor'><p>a</p></div>';
         }
       </script>
     </section>    
