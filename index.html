@@ -22,7 +22,7 @@
     
   </head>  
   <body>
-    <p>l</p>
+    <p>m</p>
     
     <section class='gui'>
       <button onClick="newFloor()" class="newFloor">
@@ -38,7 +38,8 @@
         function newFloor() {
           nfloor ++;
           window.alert(nfloor);
-          document.getElementById('building').innerHTML = '<h1>HELP!!!</h1>';
+          var x = document.getElementById('building').innerHTML;
+          document.getElementById('building').innerHTML = x + '<h1>HELP!!!</h1>';
         }
       </script>
     </section>    
