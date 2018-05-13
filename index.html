@@ -8,12 +8,12 @@
     border-radius: 5px;
   }
   .floor {
-    padding: 50px 0px;
-    width: 100%;
+    width: 90%;
     height: 50px;
     background-color: #bbb;
     border: 5px solid black;
     border-radius: 5px;
+    border-collapse: collapse;
   }
   #building {
     text-align: center;
@@ -26,7 +26,10 @@
     
   </head>  
   <body>
-    <p>u</p>
+    <div>
+      <h2>version v</h2>
+      <h4>Floor count:</h4>
+      <p id="count"></p>
     
     <section class='gui'>
       <button onClick="newFloor()" class="newFloor">
@@ -41,9 +44,9 @@
         var nfloor = 0;
         function newFloor() {
           nfloor ++;
-          window.alert(nfloor);
           var x = document.getElementById('building').innerHTML;
           document.getElementById('building').innerHTML = x + "<div class='floor'></div>";
+          document.getElementById('count').innerHTML = nfloor;
         }
       </script>
     </section>    
