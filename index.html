@@ -7,14 +7,15 @@
   </head>  
   <body>
   
-    <button onClick="makeButton()" style="background-color:blue;">Make Button</button>
+    <button onClick="makeButton()" style="background-color:yellow;">Make Button</button>
     
     <div id="Buttons"></div>
     
     <script>
       function makeButton() {
         var initCont = document.getElementById('Buttons').innerHTML;
-        initCont = initCont + 'a'
+        window.alert(initCont);    
+      }
     </script>
     
   </body>
