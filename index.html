@@ -7,11 +7,15 @@
   </head>  
   <body>
   
-    <h1>Is it that I can't change items with HTML in already?</h1>
+    <button onClick="makeButton()" style="background-color:red;">Make Button</button>
     
-    <button onClick="document.getElementById('demo').innerHTML='Hey!';" style="background-color:yellow;">Click Here!</button>
+    <div id="Buttons"></div>
     
-    <p id="demo"></p>
+    <script>
+      function makeButton() {
+        let initCont = document.getElementById('Buttons').innerHTML;
+        initCont = initCont + 'a'
+    </script>
     
   </body>
 </html>
