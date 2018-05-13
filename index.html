@@ -3,18 +3,21 @@
   <head>
   
     <title>Testing Javascript</title>
+    <link rel="stylesheet" href="main.css">    
     
   </head>  
   <body>
+    
+    <div class='box'></div>
   
-    <button onClick="makeButton()" style="background-color:green;">Make Button</button>
+    <button onClick="makeButton()" style="background-color:red;">Make Button</button>
     
     <div id="Buttons"></div>
     
     <script>
       function makeButton() {
         var initCont = document.getElementById('Buttons').innerHTML;
-        document.getElementById('Buttons').innerHTML = initCont + '<div class="box">b</div>';
+        document.getElementById('Buttons').innerHTML = initCont + '<div class="box"></div>';
       }
     </script>
     
