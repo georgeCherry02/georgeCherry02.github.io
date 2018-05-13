@@ -11,7 +11,7 @@
     width: 90%;
     background-color: #bbb;
   }
-  #building {
+  #building td {
     text-align: center;
     border: 5px solid black;
     border-radius: 5px;
@@ -26,7 +26,7 @@
   </head>  
   <body>
     <div>
-      <h2>version w</h2>
+      <h2>version a</h2>
       <h4>Floor count:</h4>
       <p id="count"></p>
     
@@ -44,7 +44,7 @@
         function newFloor() {
           nfloor ++;
           var x = document.getElementById('building').innerHTML;
-          document.getElementById('building').innerHTML = x + "<tr class='floor'></tr>";
+          document.getElementById('building').innerHTML = x + "<tr class='floor'><td></td></tr>";
           document.getElementById('count').innerHTML = nfloor;
         }
       </script>
