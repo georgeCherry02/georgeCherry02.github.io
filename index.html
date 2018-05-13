@@ -21,7 +21,7 @@
     
   </head>  
   <body>
-    <p>d</p>
+    <p>e</p>
     
     <section class='gui'>
       <button onClick="newFloor()" class="newFloor">
@@ -31,17 +31,16 @@
       <div id='building'>
         
       </div>
-    </section>
-    
-    <script>
-      var i = 0;
-      function newFloor() {
-        var initContA = document.getElementById('building').innerHTML;
-        document.getElementById('building').innerHTML = initContA + '<div class='floor'></div>';
-        i ++;
-        window.alert(i);
-      }
-    </script>
-    
+      
+      <script>
+        var i = 0;
+        function newFloor() {
+          var initContA = document.getElementById('building').innerHTML;
+          document.getElementById('building').innerHTML = initContA + '<div class='floor'></div>';
+          i ++;
+          window.alert(i);
+        }
+      </script>
+    </section>    
   </body>
 </html>
