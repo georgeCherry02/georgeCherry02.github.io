@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version F</h1>
+      <h1 class="col-6">Version G</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -124,7 +124,7 @@
         }
       }
       function generateWater() {
-        for (a=0;a<5;a++) {
+        for (a=0;a<7;a++) {
           var waterLocX = Math.floor(Math.random()*50)+1;
           var waterLocY = Math.floor(Math.random()*50)+1;
           if ((waterLocX>3 && waterLocX<47) && (waterLocY>3 && waterLocY<47)) {
@@ -143,10 +143,21 @@
         }
       }
       function generateStone() {
-        for (e=0;e<30;e++) {
+        for (e=0;e<40;e++) {
           var stoneLocX = Math.floor(Math.random()*50)+1;
           var stoneLocY = Math.floor(Math.random()*50)+1;
-          document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).className = 'col-1 stoneElement';
+          var bigStoneP = Math.floor(Math.random()*10)+1;
+          if (bigStoneP<3) {
+            for (f=stoneLocX;f<stoneLocX+2;f++) {
+              for (g=stoneLocY;g<stoneLocY+2;g++) {
+                if (!document.getElementById('col' + f.toString() + '-' + g.toString()).classList.contains('waterElement')) {
+                  document.getElementById('col' + f.toString() + '-' + g.toString()).className = 'col-1 stoneElement'
+                }
+              }
+            }
+          } else {
+            document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).className = 'col-1 stoneElement';
+          }
         }
       }
     </script>
