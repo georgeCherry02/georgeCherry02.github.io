@@ -66,13 +66,14 @@
   <body>
     
     <!--Version Declaration-->
-    <div class='row r1'>
-      <h1 class="col-10">Version X</h1>
+    <div class='row'>
+      <h1 class="col-6">Version X</h1>
     </div>
     
     <!--Trigger generate() button-->
     <div class='row'>
-      <button class="col-10" onClick='generate()'>Click here to generate</button>
+      <button class="col-3" onClick='generate()'>Click here to generate</button>
+      <button class="col-3" onClick='generateWater()'>Click for water</button>
     </div>
     
     <!--Actual Grid-->
@@ -100,6 +101,8 @@
             }
           }
         }
+      }
+      function generateWater() {
         for (a=0;a<3;a++) {
           var waterLocX = Math.floor(Math.random()*50)+1;
           var waterLocY = Math.floor(Math.random()*50)+1;
