@@ -67,7 +67,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version A</h1>
+      <h1 class="col-6">Version B</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -110,7 +110,7 @@
             for (b=waterLocX-2;b<waterLocX+3;b++) {
               if (b==waterLocX-2 || b==waterLocX+2) {
                 for (c=waterLocY-1;c<waterLocY+2;c++) {
-                  window.alert(b.toString + ' ' + c.toString());
+                  window.alert(b.toString() + ' ' + c.toString());
                   document.getElementById('col' + b.toString() + '-' + c.toString()).class = 'col-1 waterElement';
                 }
               } else {
