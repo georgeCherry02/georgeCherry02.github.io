@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <style>
-  .gridPos {
-    margin: auto;
-    width: 90%;
-    padding-top: 90%;
-    position: relative;
+  
+  /*Defining columns*/
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%}
+  .col-4 {width: 33.33%}
+  .col-5 {width: 41.66%}
+  .col-6 {width: 50%}
+  .col-7 {width: 58.33%}
+  .col-8 {width: 66.66%}
+  .col-9 {width: 75%} 
+  .col-10 {width: 83.33%} 
+  .col-11 {width: 91.66%} 
+  .col-12 {width: 100%}
+  
+  /*Making columns behave*/
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
   }
-  table {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    border: 1px solid black;
-    width: 100%;
-    border-padding: 0px;
-    border-collapse: collapse;
-    height: auto;
+  
+  /*Making rows behave*/
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
   }
+  
+  /*Centering command*/
+  .center {
+    text-align: center;
+  }
+  
 </style>
 <html>
   <head>
@@ -27,40 +43,18 @@
   </head>  
   <body>
     
-    <!--Version declaration-->
-    <header>
-      <h1>H</h1>
-    </header>
+    <!--Version Declaration-->
+    <div class='row r1'>
+      <h1 class="col-6">Version A</h1>
+    </div>
     
-    <!--Grid section-->
-    <section>
-      
-      <!--Button to generate grid-->
-      <div class='generateGrid'>
-        <button onClick='generate()' class='generateB'>Generate</button>
-      </div>
-      
-      <!--Actual grid-->
-      <div class='gridPos'>
-        <table id='grid'>
-      
-        </table>
-      </div>
-      
-    </section>
+    <!--Testing Columns-->
+    <div class='row'>
+      <div class='col-3 center'>A</div>
+      <div class='col-6 center'>B</div>
+      <div class='col-1 center'>C</div>
+      <div class='col-2 center'>D</div>
+    </div>
     
-    <!--Script-->
-    <script>
-      function generate() {
-        for (i=0;i<10;i++) {
-          var initContR = document.getElementById('grid').innerHTML;
-          document.getElementById('grid').innerHTML = initContR + "<tr id='row" + i.toString() + "'></tr>";
-          for (j=0;j<10;j++) {
-            var initContC = document.getElementById('row' + i.toString()).innerHTML;
-            document.getElementById('row' + i.toString()).innerHTML = initContC + "<td></td>";
-          }
-        }
-      }
-    </script>
   </body>
 </html>
