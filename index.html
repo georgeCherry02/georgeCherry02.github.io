@@ -19,7 +19,7 @@
     
     <!--Version declaration-->
     <header>
-      <h1>C</h1>
+      <h1>D</h1>
     </header>
     
     <!--Grid section-->
@@ -44,10 +44,10 @@
       function generate() {
         for (i=0;i<10;i++) {
           var initContR = document.getElementById('grid').innerHTML;
-          document.getElementById('grid').innerHTML = initCont + "<tr id='row " + i.toString() + "'></tr>";
+          document.getElementById('grid').innerHTML = initCont + "<tr id='row" + i.toString() + "'></tr>";
           for (j=0;j<10;j++) {
-            var initContC = document.getElementById('row ' + i.toString());
-            document.getElementById('row ' + i.toString()) = initContC + "<td></td>";
+            var initContC = document.getElementById('row' + i.toString());
+            document.getElementById('row' + i.toString()) = initContC + "<td></td>";
           }
         }
       }
