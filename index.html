@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <style>
-  
+  #grid {
+    background-color: red;
+    border: 5px solid black;
+  }
+  .row {
+    background-color: yellow;
+    border: 5px solid blue;    
+  }
 </style>
 <html>
   <head>
@@ -12,7 +19,7 @@
     
     <!--Version declaration-->
     <header>
-      <h1>A</h1>
+      <h1>B</h1>
     </header>
     
     <!--Grid section-->
@@ -37,7 +44,7 @@
       function generate() {
         for (i=0;i<10;i++) {
           var initCont = document.getElementById('grid').innerHTML;
-          document.getElementById('grid').innerHTML = initCont + "<tr id='row" + i.toString() + "'></tr>";
+          document.getElementById('grid').innerHTML = initCont + "<tr id='row " + i.toString() + "'></tr>";
         }
       }
     </script>
