@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version S</h1>
+      <h1 class="col-6">Version T</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -204,9 +204,17 @@
                 default:
                   break;
               }
-              for (l=forestLocY-forestHeight;l<forestLocY+forestHeight+1;l++) {
-                if (!(document.getElementById('col' + k.toString() + '-' + l.toString()).classList.contains('edgeElement')||document.getElementById('col' + k.toString() + '-' + l.toString()).classList.contains('waterElement'))) {
-                  document.getElementById('col' + k.toString() + '-' + l.toString()).className = 'col-1 treeElement';
+              if (k==forestLocX-forestWidth||k==forestLocX+forestWidth) {
+                for (m=forestLocY-1;m<forestLocY+2;m++) {
+                  if (!(document.getElementById('col' + k.toString() + '-' + m.toString()).classList.contains('edgeElement')||document.getElementById('col' + k.toString() + '-' + m.toString()).classList.contains('waterElement'))) {
+                    document.getElementById('col' + k.toString() + '-' + m.toString()).className = 'col-1 treeElement';
+                  }
+                }
+              } else {
+                for (l=forestLocY-forestHeight;l<forestLocY+forestHeight+1;l++) {
+                  if (!(document.getElementById('col' + k.toString() + '-' + l.toString()).classList.contains('edgeElement')||document.getElementById('col' + k.toString() + '-' + l.toString()).classList.contains('waterElement'))) {
+                    document.getElementById('col' + k.toString() + '-' + l.toString()).className = 'col-1 treeElement';
+                  }
                 } 
               }
             }
