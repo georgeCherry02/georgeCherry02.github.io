@@ -38,9 +38,15 @@
   }
   
   /*gridElement style*/
-  .gridElement {
+  .grassElement {
     text-align: center;
     background-color: #0a911e;
+    padding: 0.96%;
+  }
+  
+  /*waterElement style*/
+  .waterElement {
+    background-color: #43acf2;
     padding: 0.96%;
   }
   
@@ -61,7 +67,7 @@
     
     <!--Version Declaration-->
     <div class='row r1'>
-      <h1 class="col-10">Version T</h1>
+      <h1 class="col-10">Version U</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -82,14 +88,31 @@
           for (i=0;i<52;i++) {
             if (j==0||j==51) {
               var initContGE = document.getElementById('row' + j.toString()).innerHTML;
-              document.getElementById('row' + j.toString()).innerHTML = initContGE + "<div class='col-1 edgeElement col" + i.toString() + "'></div>";
+              document.getElementById('row' + j.toString()).innerHTML = initContGE + "<div class='col-1 edgeElement' id='col" + i.toString() + j.toString() + "'></div>";
             } else {
               if (i==0||i==51) {
                 var initContGRE = document.getElementById('row' + j.toString()).innerHTML;
-                document.getElementById('row' + j.toString()).innerHTML = initContGRE + "<div class='col-1 edgeElement col" + i.toString() + "'></div>";
+                document.getElementById('row' + j.toString()).innerHTML = initContGRE + "<div class='col-1 edgeElement' id='col" + i.toString() + j.toString() + "'></div>";
               } else {
                 var initContG = document.getElementById('row' + j.toString()).innerHTML;
-                document.getElementById('row' + j.toString()).innerHTML = initContG + "<div class='col-1 gridElement col" + i.toString() + "'></div>";
+                document.getElementById('row' + j.toString()).innerHTML = initContG + "<div class='col-1 grassElement' id='col" + i.toString() + j.toString() + "'></div>";
+              }
+            }
+          }
+        }
+        for (a=0;a<3;a++) {
+          var waterLocX = Math.floor(Math.random()*50)+1;
+          var waterLocY = Math.floor(Math.random()*50)+1;
+          if ((waterLocX>3 && waterLocX<47) && (waterLocY>3 && waterLocY<47)) {
+            for (b=waterLocX-2;b<waterLocX+3;b++) {
+              if (b=waterLocX-2 || b=waterLocX+2) {
+                for (c=waterLocY-1;c<waterLocY+2;c++) {
+                  document.getElementById('col' + b.toString() + c.toString()).innerHTML = "<div class='col-1 waterElement' id='col" + b.toString() + c.toString() + "'></div>";
+                }
+              } else {
+                for (d=waterLocY-2;d<waterLocY+3;d++) {
+                  document.getElementById('col' + b.toString() + d.toString()).innerHTML = "<div class='col-1 waterElement' id='col" + b.toString() + d.toString() + "'></div>";
+                }
               }
             }
           }
