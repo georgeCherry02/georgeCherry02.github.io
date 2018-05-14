@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version E</h1>
+      <h1 class="col-6">Version F</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -124,7 +124,7 @@
         }
       }
       function generateWater() {
-        for (a=0;a<3;a++) {
+        for (a=0;a<5;a++) {
           var waterLocX = Math.floor(Math.random()*50)+1;
           var waterLocY = Math.floor(Math.random()*50)+1;
           if ((waterLocX>3 && waterLocX<47) && (waterLocY>3 && waterLocY<47)) {
@@ -143,12 +143,10 @@
         }
       }
       function generateStone() {
-        for (e=0;e<10;e++) {
+        for (e=0;e<30;e++) {
           var stoneLocX = Math.floor(Math.random()*50)+1;
           var stoneLocY = Math.floor(Math.random()*50)+1;
-          if (!document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).classList.contains('waterElement')) {
-            document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).className = 'col-1 stoneElement';
-          }
+          document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).className = 'col-1 stoneElement';
         }
       }
     </script>
