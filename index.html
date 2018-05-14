@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version I</h1>
+      <h1 class="col-6">Version J</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -156,7 +156,7 @@
               }
             }
           } else {
-            if (!document.getElementById('col' + f.toString() + '-' + g.toString()).classList.contains('waterElement')) {
+            if (!document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).classList.contains('waterElement')) {
               document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).className = 'col-1 stoneElement';
             }
           }
@@ -166,8 +166,8 @@
         for (h=0;h<3;h++) {
           var stoneLocX = Math.floor(Math.random()*50)+1;
           var stoneLocY = Math.floor(Math.random()*50)+1;
-          window.alert(stoneLocX.toString());
           var forestWidth = Math.floor((Math.floor(Math.random()*10)+1)/2);
+          window.alert(forestWidth.toString());
           for (k=stoneLocX-forestWidth;k<stoneLocX-forestWidth+1;k++) {
             var forestHeight = Math.floor((Math.floor(Math.random()*10)+1)/2);
             for (l=stoneLocY-forestHeight;l<stoneLocY-forestHeight+1;l++) {
