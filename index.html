@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version G</h1>
+      <h1 class="col-6">Version H</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -124,7 +124,7 @@
         }
       }
       function generateWater() {
-        for (a=0;a<7;a++) {
+        for (a=0;a<10;a++) {
           var waterLocX = Math.floor(Math.random()*50)+1;
           var waterLocY = Math.floor(Math.random()*50)+1;
           if ((waterLocX>3 && waterLocX<47) && (waterLocY>3 && waterLocY<47)) {
@@ -151,12 +151,27 @@
             for (f=stoneLocX;f<stoneLocX+2;f++) {
               for (g=stoneLocY;g<stoneLocY+2;g++) {
                 if (!document.getElementById('col' + f.toString() + '-' + g.toString()).classList.contains('waterElement')) {
-                  document.getElementById('col' + f.toString() + '-' + g.toString()).className = 'col-1 stoneElement'
+                  document.getElementById('col' + f.toString() + '-' + g.toString()).className = 'col-1 stoneElement';
                 }
               }
             }
           } else {
             document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).className = 'col-1 stoneElement';
+          }
+        }
+      }
+      function generateTree() {
+        for (h=0;h<3;h++) {
+          var stoneLocX = Math.floor(Math.random()*50)+1;
+          var stoneLocY = Math.floor(Math.random()*50)+1;
+          var forestWidth = Math.floor((Math.floor(Math.random()*10)+1)/2);
+          for (k=stoneLocX-forestWidth;k<stoneLocX-forestWidth+1;k++) {
+            var forestHeight = Math.floor((Math.floor(Math.random()*10)+1)/2);
+            for (l=stoneLocY-forestHeight;l<stoneLocY-forestHeight+1;l++) {
+              if (!(document.getElementById('col' + k.toString() + '-' + l.toString()).classList.contains('waterElement')||document.getElementById('col' + k.toString() + '-' + l.toString()).classList.contains('edgeElement'))) {
+                document.getElementById('col' + k.toString() + '-' + l.toString()).className = 'col-1 treeElement';
+              }
+            }
           }
         }
       }
