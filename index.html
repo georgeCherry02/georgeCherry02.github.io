@@ -12,7 +12,7 @@
   }
   
   /*Defining columns*/
-  .col-1 {width: 8.33%;}
+  .col-1 {width: 1.92%;}
   .col-2 {width: 16.66%;}
   .col-3 {width: 25%}
   .col-4 {width: 33.33%}
@@ -28,7 +28,6 @@
   /*Making columns behave*/
   [class*="col-"] {
     float: left;
-    padding: 15px;
     border: 1px solid black;
   }
   
@@ -66,12 +65,12 @@
     
     <!--Version Declaration-->
     <div class='row r1'>
-      <h1 class="col-6">Version N</h1>
+      <h1 class="col-10">Version O</h1>
     </div>
     
     <!--Trigger generate() button-->
     <div class='row'>
-      <button class="col-3" onClick='generate()'>Click here to generate</button>
+      <button class="col-10" onClick='generate()'>Click here to generate</button>
     </div>
     
     <!--Actual Grid-->
@@ -83,15 +82,15 @@
       function generate() {
         var gridElement = "<div class='col-1 gridElement'>G</div>";
         var edgeElement = "<div class='col-1 edgeElement'>E</div>";
-        for (j=0;j<12;j++) {
+        for (j=0;j<52;j++) {
           var initContGT = document.getElementById('grid').innerHTML;
           document.getElementById('grid').innerHTML = initContGT + "<div class='row' id='row" + j.toString() + "'></div>"
-          for (i=0;i<12;i++) {
-            if (j==0||j==11) {
+          for (i=0;i<52;i++) {
+            if (j==0||j==51) {
               var initContGE = document.getElementById('row' + j.toString()).innerHTML;
               document.getElementById('row' + j.toString()).innerHTML = initContGE + edgeElement;
             } else {
-              if (i==0||i==11) {
+              if (i==0||i==51) {
                 var initContGRE = document.getElementById('row' + j.toString()).innerHTML;
                 document.getElementById('row' + j.toString()).innerHTML = initContGRE + edgeElement;
               } else {
