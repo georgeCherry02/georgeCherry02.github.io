@@ -67,7 +67,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version X</h1>
+      <h1 class="col-6">Version Y</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -106,6 +106,7 @@
         for (a=0;a<3;a++) {
           var waterLocX = Math.floor(Math.random()*50)+1;
           var waterLocY = Math.floor(Math.random()*50)+1;
+          window.alert(waterLocX.toString() + ' ' + waterLocY.toString());
           if ((waterLocX>3 && waterLocX<47) && (waterLocY>3 && waterLocY<47)) {
             for (b=waterLocX-2;b<waterLocX+3;b++) {
               if (b==waterLocX-2 || b==waterLocX+2) {
