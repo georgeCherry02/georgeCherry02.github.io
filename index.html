@@ -19,7 +19,7 @@
     
     <!--Version declaration-->
     <header>
-      <h1>E</h1>
+      <h1>F</h1>
     </header>
     
     <!--Grid section-->
@@ -46,8 +46,8 @@
           var initContR = document.getElementById('grid').innerHTML;
           document.getElementById('grid').innerHTML = initContR + "<tr id='row" + i.toString() + "'></tr>";
           for (j=0;j<10;j++) {
-            var initContC = document.getElementById('row' + i.toString());
-            document.getElementById('row' + i.toString()) = initContC + "<td></td>";
+            var initContC = document.getElementById('row' + i.toString()).innerHTML;
+            document.getElementById('row' + i.toString()).innerHTML = initContC + "<td></td>";
           }
         }
       }
