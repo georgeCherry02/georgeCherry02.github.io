@@ -62,7 +62,7 @@
     
     <!--Version Declaration-->
     <div class='row r1'>
-      <h1 class="col-6">Version I</h1>
+      <h1 class="col-6">Version J</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -80,12 +80,21 @@
         var gridElement = "<div class='col-1 gridElement'>G</div>";
         var edgeElement = "<div class='col-1'>E</div>";
         for (j=0;j<12;j++) {
-          if (j==0||j==11) {
-            var initContGTE = document.getElementById('grid').innerHTML;
-            document.getElementById('grid').innerHTML = initContGTE + "<div class='row' id='row" + j.toString() + "'></div>"
-          } else {
-            var initContGT = document.getElementById('grid').innerHTML;
-            document.getElementById('grid').innerHTML = initContGT + "<div class='row' id='row" + j.toString() + "'></div>";
+          var initContGT = document.getElementById('grid').innerHTML;
+          document.getElementById('grid').innerHTML = initContGTE + "<div class='row' id='row" + j.toString() + "'></div>"
+          for (i=0;i<12;i++) {
+            if (j==0||j==11) {
+              var initContGE = document.getElementById('row' + j.toString()).innerHTML;
+              document.getElementById('row' + j.toString()).innerHTML = initContGE + edgeElement;
+            } else {
+              if (i==0||i==11) {
+                var initContGRE = document.getElementById('row' + j.toString()).innerHTML;
+                document.getElementById('row' + j.toString()).innerHTML = initContGRE + edgeElement;
+              } else {
+                var initContG = document.getElementById('row' = j.toString()).innerHTML;
+                docuement.getElementById('row' + j.toString()).innerHTML = initContG + gridElement;
+              }
+            }
           }
         }
       }
