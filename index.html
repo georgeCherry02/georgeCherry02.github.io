@@ -156,7 +156,9 @@
               }
             }
           } else {
-            document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).className = 'col-1 stoneElement';
+            if (!document.getElementById('col' + f.toString() + '-' + g.toString()).classList.contains('waterElement')) {
+              document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).className = 'col-1 stoneElement';
+            }
           }
         }
       }
