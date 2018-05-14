@@ -28,12 +28,6 @@
   /*Making columns behave*/
   [class*="col-"] {
     float: left;
-    border: 1px solid black;
-  }
-  
-  /*Trying to make rows correct height*/
-  .row {
-    top-padding: 8.33%;
   }
   
   /*Making rows behave*/
@@ -65,7 +59,7 @@
     
     <!--Version Declaration-->
     <div class='row r1'>
-      <h1 class="col-10">Version O</h1>
+      <h1 class="col-10">Version P</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -80,8 +74,8 @@
     
     <script>
       function generate() {
-        var gridElement = "<div class='col-1 gridElement'>G</div>";
-        var edgeElement = "<div class='col-1 edgeElement'>E</div>";
+        var gridElement = "<div class='col-1 gridElement'></div>";
+        var edgeElement = "<div class='col-1 edgeElement'></div>";
         for (j=0;j<52;j++) {
           var initContGT = document.getElementById('grid').innerHTML;
           document.getElementById('grid').innerHTML = initContGT + "<div class='row' id='row" + j.toString() + "'></div>"
