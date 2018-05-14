@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version P</h1>
+      <h1 class="col-6">Version Q</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -167,6 +167,24 @@
           var forestLocX = Math.floor(Math.random()*50)+1;
           var forestLocY = Math.floor(Math.random()*50)+1;
           var forestWidth = Math.floor(Math.random()*5+1);
+          var forestCount = 0;
+          if ((forestLocX>5&&forestLocX<45)&&(forestLocY>5&&forestLocY<45)) {
+            for (k=forestLocX-forestWidth;k<forestLocX+forestWidth+1;k++) {
+              var forestHeight = Math.floor(Math.random()*5+1);
+              for (l=forestLocY-forestHeight;l<forestLocY+forestHeight+1;l++) {
+                if (!(document.getElementById('col' + k.toString() + '-' + l.toString()).classList.contains('edgeElement')||document.getElementById('col' + k.toString() + '-' + l.toString()).classList.contains('waterElement'))) {
+                  document.getElementById('col' + k.toString() + '-' + l.toString()).className = 'col-1 treeElement';
+                } 
+              }
+            }
+            forestCount++;
+          }
+        }
+        if (forestCount<2) {
+          var forestLocX = Math.floor(Math.random()*50)+1;
+          var forestLocY = Math.floor(Math.random()*50)+1;
+          var forestWidth = Math.floor(Math.random()*5+1);
+          var forestCount = 0;
           if ((forestLocX>5&&forestLocX<45)&&(forestLocY>5&&forestLocY<45)) {
             for (k=forestLocX-forestWidth;k<forestLocX+forestWidth+1;k++) {
               var forestHeight = Math.floor(Math.random()*5+1);
