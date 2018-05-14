@@ -1,34 +1,6 @@
 <!DOCTYPE html>
 <style>
-  .a {
-    text-align: center;
-  }
-  .gui {
-    text-align: center;
-  }
-  .newFloor {
-    background-color: yellow;
-    border-radius: 5px;
-    padding: 10px;
-  }
-  .floor {
-    width: 100%;
-    background-color: #bbb;
-  }
-  #building {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0px;
-  }
-  #building td {
-    border: 5px solid black;
-    border-collapse: collapse;
-    height: 50px;
-  }
-  .bpos {
-    width: 90%;
-    margin: auto;
-  }
+  
 </style>
 <html>
   <head>
@@ -37,32 +9,37 @@
     
   </head>  
   <body>
-    <div class="a">
-      <h2>Version d</h2>
-      <h4>Floor count:</h4>
-      <p id="count"></p>
-    </div>
     
-    <section class='gui'>
-      <button onClick="newFloor()" class="newFloor">
-        New floor
-      </button>
+    <!--Version declaration-->
+    <header>
+      <h1>A</h1>
+    </header>
+    
+    <!--Grid section-->
+    <section>
       
-      <div class="bpos">
-        <table id='building'>
-        
+      <!--Button to generate grid-->
+      <div class='generateGrid'>
+        <button onClick='generate()' class='generateB'>Generate</button>
+      </div>
+      
+      <!--Actual grid-->
+      <div class='gridPos'>
+        <table id='grid'>
+      
         </table>
       </div>
       
-      <script>
-        var nfloor = 0;
-        function newFloor() {
-          nfloor ++;
-          var x = document.getElementById('building').innerHTML;
-          document.getElementById('building').innerHTML = x + "<tr class='floor'><td></td></tr>";
-          document.getElementById('count').innerHTML = nfloor;
+    </section>
+    
+    <!--Script-->
+    <script>
+      function generate() {
+        for (i=0;i<10;i++) {
+          var initCont = document.getElementById('grid').innerHTML;
+          document.getElementById('grid').innerHTML = initCont + "<tr id='row" + i.toString() + "'></tr>";
         }
-      </script>
-    </section>    
+      }
+    </script>
   </body>
 </html>
