@@ -57,24 +57,31 @@
     
     <!--Version Declaration-->
     <div class='row r1'>
-      <h1 class="col-6">Version E</h1>
+      <h1 class="col-6">Version F</h1>
+    </div>
+    
+    <!--Trigger generate() button-->
+    <div class='row'>
+      <button class="col-3" onClick='generate()'>Click here to generate</button>
     </div>
     
     <!--Testing Columns-->
-    <div class='row'>
-      <div class='col-1 center'>E</div>
-      <div class='col-1 gridElement'>G</div>
-      <div class='col-1 gridElement'>G</div>
-      <div class='col-1 gridElement'>G</div>
-      <div class='col-1 gridElement'>G</div>
-      <div class='col-1 gridElement'>G</div>
-      <div class='col-1 gridElement'>G</div>
-      <div class='col-1 gridElement'>G</div>
-      <div class='col-1 gridElement'>G</div>
-      <div class='col-1 gridElement'>G</div>
-      <div class='col-1 gridElement'>G</div>
-      <div class='col-1 center'>E</div>
+    <div class='row' id='gridRow'>
+      
     </div>
     
+    <script>
+      function generate() {
+        for (i=0;i<12;i++) {
+          if (i==0||i==11) {
+            var initContE = document.getElementById('gridRow').innerHTML;
+            document.getElementById('gridRow').innerHTML = initContE + "<div class='col-1'>E</div>";
+          } else {
+            var initContG = document.getElementById('gridRow').innerHTML;
+            document.getElementById('gridRow').innerHTML = initContG + "<div class='col-1 gridElement'>G</div>";
+          }
+        }
+      }
+    </script>
   </body>
 </html>
