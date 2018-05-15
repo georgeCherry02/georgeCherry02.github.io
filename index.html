@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version M</h1>
+      <h1 class="col-6">Version N</h1>
     </div>
     
     <!--Testing Buttons-->
@@ -148,7 +148,7 @@
           if (bigStoneP<3) {
             for (i=stoneLocX;i<stoneLocX+2;i++) {
               for (j=stoneLocY;j<stoneLocY+2;j++) {
-                if ((stoneLocX<51)&&(!(document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('waterElement')||document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('edgeElement')))) {
+                if ((stoneLocX<51&&stoneLocY<51)&&(!(document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('waterElement')||document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('edgeElement')))) {
                   document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 stoneElement';
                 }
               }
