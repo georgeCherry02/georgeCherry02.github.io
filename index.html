@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version T</h1>
+      <h1 class="col-6">Version U</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -128,14 +128,14 @@
           var waterLocX = Math.floor(Math.random()*50)+1;
           var waterLocY = Math.floor(Math.random()*50)+1;
           if ((waterLocX>3 && waterLocX<47) && (waterLocY>3 && waterLocY<47)) {
-            for (b=waterLocX-2;b<waterLocX+3;b++) {
-              if (b==waterLocX-2 || b==waterLocX+2) {
-                for (c=waterLocY-1;c<waterLocY+2;c++) {
-                  document.getElementById('col' + b.toString() + '-' + c.toString()).className = 'col-1 waterElement';
+            for (i=waterLocX-2;i<waterLocX+3;i++) {
+              if (i==waterLocX-2 || i==waterLocX+2) {
+                for (j=waterLocY-1;j<waterLocY+2;j++) {
+                  document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
                 }
               } else {
-                for (d=waterLocY-2;d<waterLocY+3;d++) {
-                  document.getElementById('col' + b.toString() + '-' + d.toString()).className = 'col-1 waterElement';
+                for (j=waterLocY-2;j<waterLocY+3;j++) {
+                  document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
                 }
               }
             }
@@ -166,61 +166,16 @@
         for (h=0;h<3;h++) {
           var forestLocX = Math.floor(Math.random()*50)+1;
           var forestLocY = Math.floor(Math.random()*50)+1;
-          var forestWidth = Math.floor(Math.random()*5+1);
-          var forestCount = 0;
-          if ((forestLocX>5&&forestLocX<45)&&(forestLocY>5&&forestLocY<45)) {
-            for (k=forestLocX-forestWidth;k<forestLocX+forestWidth+1;k++) {
-              var forestHeight = Math.floor(Math.random()*5+1);
-              for (l=forestLocY-forestHeight;l<forestLocY+forestHeight+1;l++) {
-                if (!(document.getElementById('col' + k.toString() + '-' + l.toString()).classList.contains('edgeElement')||document.getElementById('col' + k.toString() + '-' + l.toString()).classList.contains('waterElement'))) {
-                  document.getElementById('col' + k.toString() + '-' + l.toString()).className = 'col-1 treeElement';
-                } 
-              }
-            }
-            forestCount++;
-          }
-        }
-        if (forestCount<2) {
-          var forestLocX = Math.floor(Math.random()*50)+1;
-          var forestLocY = Math.floor(Math.random()*50)+1;
-          var forestWidth = Math.floor(Math.random()*5+1);
-          var forestHeight = Math.floor(Math.random()*forestWidth+1)+2;
-          var forestCount = 0;
-          if ((forestLocX>5&&forestLocX<45)&&(forestLocY>5&&forestLocY<45)) {
-            for (k=forestLocX-forestWidth;k<forestLocX+forestWidth+1;k++) {
-              switch (Math.floor(Math.random()*20+1)) {
-                case 1||2:
-                  forestHeight=forestHeight-2;
-                  break;
-                case 20||19:
-                  forestHeight=forestHeight+2;
-                  break;
-                case 3||4||5:
-                  forestHeight--;
-                  break;
-                case 18||17||16:
-                  forestHeight++;
-                  break;
-                default:
-                  break;
-              }
-              if (k==forestLocX-forestWidth||k==forestLocX+forestWidth) {
-                for (m=forestLocY-1;m<forestLocY+2;m++) {
-                  if (!(document.getElementById('col' + k.toString() + '-' + m.toString()).classList.contains('edgeElement')||document.getElementById('col' + k.toString() + '-' + m.toString()).classList.contains('waterElement'))) {
-                    document.getElementById('col' + k.toString() + '-' + m.toString()).className = 'col-1 treeElement';
-                  }
-                }
-              } else {
-                for (l=forestLocY-forestHeight;l<forestLocY+forestHeight+1;l++) {
-                  if (!(document.getElementById('col' + k.toString() + '-' + l.toString()).classList.contains('edgeElement')||document.getElementById('col' + k.toString() + '-' + l.toString()).classList.contains('waterElement'))) {
-                    document.getElementById('col' + k.toString() + '-' + l.toString()).className = 'col-1 treeElement';
-                  }
-                } 
-              }
-            }
+          if ((forestLocX>4 && forestLocY<47)&&(forestLocY>4 && forestLocY<47)) {
+            for (k=forestLocX-5;k<forestLocX+6;k++) {
+              switch (k) {
+                case (forestLocX-5||forestLocX+5):
+                  for (l=forestLocY-5;l<forestLocY+6;;l++)
+            }                 
           }
         }
       }
+    
     </script>
   </body>
 </html>
