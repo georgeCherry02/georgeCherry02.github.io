@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version I</h1>
+      <h1 class="col-6">Version J</h1>
     </div>
     
     <!--Actual Grid-->
@@ -142,13 +142,13 @@
           if (bigStoneP<3) {
             for (i=stoneLocX;i<stoneLocX+2;i++) {
               for (j=stoneLocY;j<stoneLocY+2;j++) {
-                if (!document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('waterElement')) {
+                if (!(document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('waterElement')||document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('edgeElement'))) {
                   document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 stoneElement';
                 }
               }
             }
           } else {
-            if (!document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).classList.contains('waterElement')) {
+            if (!(document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).classList.contains('waterElement')||document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('edgeElement'))) {
               document.getElementById('col' + stoneLocX.toString() + '-' + stoneLocY.toString()).className = 'col-1 stoneElement';
             }
           }
