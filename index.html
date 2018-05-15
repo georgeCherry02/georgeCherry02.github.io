@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version B</h1>
+      <h1 class="col-6">Version C</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -168,19 +168,15 @@
           var forestLocY = Math.floor(Math.random()*50)+1;
           if ((forestLocX>3 && forestLocY<48)&&(forestLocY>3 && forestLocY<48)) {
             for (i=forestLocX-4;i<forestLocX+5;i++) {
-              switch (i) {
-                case ((forestLocX-4)||(forestLocX+4)):
-                  window.alert('a');
-                  break;
-                case (forestLocX-3||forestLocX+3):
-                  window.alert('b');
-                  break;
-                case (forestLocX-2||forestLocX+2):
-                  window.alert('c');
-                  break;
-                default:
-                  window.alert('core');
-              }            
+              if (i==forestLocX-4||i==forestLocX+4) {
+                window.alert('a');
+              } else if (i==forestLocX-3||i==forestLocX+3) {
+                window.alert('b');
+              } else if (i==forestLocX-2||i==forestLocX+2) {
+                window.alert('c');
+              } else {
+                window.alert('core');
+              }                
             }                 
           }
         }
