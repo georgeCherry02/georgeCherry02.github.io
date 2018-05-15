@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version L</h1>
+      <h1 class="col-6">Version M</h1>
     </div>
     
     <!--Testing Buttons-->
@@ -148,7 +148,7 @@
           if (bigStoneP<3) {
             for (i=stoneLocX;i<stoneLocX+2;i++) {
               for (j=stoneLocY;j<stoneLocY+2;j++) {
-                if (!(document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('waterElement')||document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('edgeElement'))) {
+                if ((stoneLocX<51)&&(!(document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('waterElement')||document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('edgeElement')))) {
                   document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 stoneElement';
                 }
               }
@@ -164,7 +164,7 @@
         for (a=0;a<10;a++) {
           var forestLocX = Math.floor(Math.random()*50)+1;
           var forestLocY = Math.floor(Math.random()*50)+1;
-          if ((forestLocX>3 && forestLocY<48)&&(forestLocY>3 && forestLocY<48)) {
+          if ((forestLocX>3 && forestLocY<47)&&(forestLocY>3 && forestLocY<47)) {
             for (i=forestLocX-4;i<forestLocX+5;i++) {
               for (j=forestLocY-4;j<forestLocY+5;j++) {
                 var treeP = Math.floor(Math.random()*100)+1;
