@@ -86,15 +86,16 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version F</h1>
+      <h1 class="col-6">Version G</h1>
     </div>
     
     <!--Trigger generate() button-->
     <div class='row'>
-      <button class="col-2" onClick='generate()'>Click for land</button>
+      <button class="col-2" onClick='generateLand()'>Click for land</button>
       <button class="col-2" onClick='generateWater()'>Click for water</button>
       <button class="col-2" onClick='generateStone()'>Click for stone</button>
       <button class="col-2" onClick='generateTree()'>Click for forest</button>
+      <button class="col-2" onClick='generate()'>GENERATE</button>
     </div>
     
     <!--Actual Grid-->
@@ -103,7 +104,7 @@
     </div>
     
     <script>
-      function generate() {
+      function generateLand() {
         for (j=0;j<52;j++) {
           var initContGT = document.getElementById('grid').innerHTML;
           document.getElementById('grid').innerHTML = initContGT + "<div class='row' id='row" + j.toString() + "'></div>"
@@ -221,7 +222,13 @@
             }                 
           }
         }
-      }    
+      }
+      function generate() {
+        generateLand();
+        generateWater();
+        generateStone();
+        generateTree();
+      }
     </script>
   </body>
 </html>
