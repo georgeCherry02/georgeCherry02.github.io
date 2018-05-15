@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version V</h1>
+      <h1 class="col-6">Version W</h1>
     </div>
     
     <!--Trigger generate() button-->
@@ -162,6 +162,89 @@
           }
         }
       }
+      function generateTree() {
+        for (a=0;a<3;a++) {
+          var forestLocX = Math.floor(Math.random()*50)+1;
+          var forestLocY = Math.floor(Math.random()*50)+1;
+          if ((forestLocX>3 && forestLocY<48)&&(forestLocY>3 && forestLocY<48)) {
+            for (i=forestLocX-4;i<forestLocX+5;i++) {
+              switch (i) {
+                case (forestLocX-4||forestLocX+4):
+                  for (j=forestLocY-4;j<forestLocY+5;;j++) {
+                    var treeP = Math.floor(Math.random()*100)+1;
+                    if (treeP<6) {
+                      document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
+                    }
+                  }
+                  break;
+                case (forestLocX-3||forestLocX+3):
+                  for (j=forestLocY-4;j<forestLocY+5;j++) {
+                    if (j==forestLocY-4||j==forestLocY+4) {
+                      var treeP = Math.floor(Math.random()*100)+1;
+                      if (treeP<6) {
+                        document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
+                      }
+                    } else {
+                      var treeP = Math.floor(Math.random()*100)+1;
+                      if (treeP<61) {
+                        document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
+                      }
+                    }
+                  }
+                  break;
+                case (forestLocX-2||forestLocX+2):
+                  for (j=forestLocY-4;j<forestLocY+5;j++) {
+                    switch (j) {
+                      case (forestLocY-4||forestLocY+4):
+                        var treeP = Math.floor(Math.random()*100)+1;
+                        if (treeP<6) {
+                          document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
+                        }
+                        break;
+                      case (forestLocY-3||forestLocY+3):
+                        var treeP = Math.floor(Math.random()*100)+1;
+                        if (treeP<61) {
+                          document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
+                        }
+                        break;
+                      default:
+                        var treeP = Math.floor(Math.random()*100)+1;
+                        if (treeP<76) {
+                          document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
+                        }
+                    }
+                  }
+                  break;
+                default:
+                  for (j=forestLocY-4;j<forestLocY+5;j++) {
+                    switch (j) {
+                      case (forestLocY-4||forestLocY+4):
+                        var treeP = Math.floor(Math.random()*100)+1;
+                        if (treeP<6) {
+                          document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
+                        }
+                        break;
+                      case (forestLocY-3||forestLocY+3):
+                        var treeP = Math.floor(Math.random()*100)+1;
+                        if (treeP<61) {
+                          document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
+                        }
+                        break;
+                      case (forestLocY-2||forestLocY+2):
+                        var treeP = Math.floor(Math.random()*100)+1;
+                        if (treeP<76) {
+                          document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
+                        }
+                        break;
+                      default:
+                        document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
+                    }
+                  }
+              }
+            }                 
+          }
+        }
+      }    
     </script>
   </body>
 </html>
