@@ -86,7 +86,13 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version J</h1>
+      <h1 class="col-6">Version K</h1>
+    </div>
+    
+    <!--Testing Buttons-->
+    <div class='row'>
+      <button class='col-2' onClick='clear()'>Clear</button>
+      <button class='col-2' onClick='regenerate()'>Regenerate</button>
     </div>
     
     <!--Actual Grid-->
@@ -155,7 +161,7 @@
         }
       }
       function generateTree() {
-        for (a=0;a<8;a++) {
+        for (a=0;a<10;a++) {
           var forestLocX = Math.floor(Math.random()*50)+1;
           var forestLocY = Math.floor(Math.random()*50)+1;
           if ((forestLocX>3 && forestLocY<48)&&(forestLocY>3 && forestLocY<48)) {
@@ -219,6 +225,13 @@
         generateWater();
         generateStone();
         generateTree();
+      }
+      function clear() {
+        document.getElementById('grid').innerHTML = '';
+      }
+      function regenerate() {
+        clear();
+        generate();
       }
     </script>
   </body>
