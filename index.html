@@ -86,12 +86,12 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version K</h1>
+      <h1 class="col-6">Version L</h1>
     </div>
     
     <!--Testing Buttons-->
     <div class='row'>
-      <button class='col-2' onClick='clear()'>Clear</button>
+      <button class='col-2' onClick='eraseC()'>Clear</button>
       <button class='col-2' onClick='regenerate()'>Regenerate</button>
     </div>
     
@@ -226,11 +226,11 @@
         generateStone();
         generateTree();
       }
-      function clear() {
+      function eraseC() {
         document.getElementById('grid').innerHTML = '';
       }
       function regenerate() {
-        clear();
+        eraseC();
         generate();
       }
     </script>
