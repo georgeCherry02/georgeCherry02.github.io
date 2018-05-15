@@ -163,7 +163,7 @@
         }
       }
       function generateTree() {
-        for (a=0;a<3;a++) {
+        for (a=0;a<6;a++) {
           var forestLocX = Math.floor(Math.random()*50)+1;
           var forestLocY = Math.floor(Math.random()*50)+1;
           if ((forestLocX>3 && forestLocY<48)&&(forestLocY>3 && forestLocY<48)) {
@@ -194,7 +194,7 @@
                       document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
                     }
                   } else {
-                    if ((treeP<61)&&(!(document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('waterElement')||document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('edgeElement')))) {
+                    if ((treeP<76)&&(!(document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('waterElement')||document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('edgeElement')))) {
                       document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
                     }
                   }
@@ -208,7 +208,7 @@
                       document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
                     }
                   } else if (j==forestLocY-2||j==forestLocY+2) {
-                    if ((treeP<61)&&(!(document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('waterElement')||document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('edgeElement')))) {
+                    if ((treeP<76)&&(!(document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('waterElement')||document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains('edgeElement')))) {
                       document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 treeElement';
                     }                   
                   } else {
