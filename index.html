@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version r</h1>
+      <h1 class="col-6">Version S</h1>
     </div>
     
     <!--Testing Buttons-->
@@ -130,12 +130,12 @@
               if (i==waterLocX-2 || i==waterLocX+2) {
                 for (j=waterLocY-1;j<waterLocY+2;j++) {
                   document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
-                  document.getElementById('col' + i.toString() + '-' + j.toString()).onClick = 'alertWater()';
+                  document.getElementById('col' + i.toString() + '-' + j.toString()).setAttribute('onClick','alertWater()');
                 }
               } else {
                 for (j=waterLocY-2;j<waterLocY+3;j++) {
                   document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
-                  document.getElementById('col' + i.toString() + '-' + j.toString()).onClick = 'alertWater()';
+                  document.getElementById('col' + i.toString() + '-' + j.toString()).setAttribute('onClick','alertWater()');
                 }
               }
             }
