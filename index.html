@@ -130,12 +130,12 @@
               if (i==waterLocX-2 || i==waterLocX+2) {
                 for (j=waterLocY-1;j<waterLocY+2;j++) {
                   document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
-                  document.getElementById('col' + i.toString() + '-' + j.toString()).onClick = alertWater();
+                  document.getElementById('col' + i.toString() + '-' + j.toString()).onClick = 'alertWater()';
                 }
               } else {
                 for (j=waterLocY-2;j<waterLocY+3;j++) {
                   document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
-                  document.getElementById('col' + i.toString() + '-' + j.toString()).onClick = alertWater();
+                  document.getElementById('col' + i.toString() + '-' + j.toString()).onClick = 'alertWater()';
                 }
               }
             }
