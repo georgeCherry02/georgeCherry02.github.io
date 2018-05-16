@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version U</h1>
+      <h1 class="col-6">Version V</h1>
     </div>
     
     <!--Testing Buttons-->
@@ -115,7 +115,7 @@
                 document.getElementById('row' + j.toString()).innerHTML = initContGRE + "<div class='col-1 edgeElement' id='col" + i.toString() + '-' + j.toString() + "'></div>";
               } else {
                 var initContG = document.getElementById('row' + j.toString()).innerHTML;
-                document.getElementById('row' + j.toString()).innerHTML = initContG + "<button onClick='alertGrass()' class='col-1 grassElement' id='col" + i.toString() + '-' + j.toString() + "'></button>";
+                document.getElementById('row' + j.toString()).innerHTML = initContG + "<button onClick='returnPos(this.id)' class='col-1 grassElement' id='col" + i.toString() + '-' + j.toString() + "'></button>";
               }
             }
           }
@@ -130,12 +130,10 @@
               if (i==waterLocX-2 || i==waterLocX+2) {
                 for (j=waterLocY-1;j<waterLocY+2;j++) {
                   document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
-                  document.getElementById('col' + i.toString() + '-' + j.toString()).setAttribute('onClick','alertWater()');
                 }
               } else {
                 for (j=waterLocY-2;j<waterLocY+3;j++) {
                   document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
-                  document.getElementById('col' + i.toString() + '-' + j.toString()).setAttribute('onClick','alertWater()');
                 }
               }
             }
@@ -235,11 +233,8 @@
         eraseC();
         generate();
       }
-      function alertGrass() {
-        window.alert('grass');
-      }
-      function alertWater() {
-        window.alert('water');
+      function returnPos(pos) {
+        window.alert(pos);
       }
     </script>
   </body>
