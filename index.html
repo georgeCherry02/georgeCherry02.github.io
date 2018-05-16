@@ -86,7 +86,7 @@
     
     <!--Version Declaration-->
     <div class='row'>
-      <h1 class="col-6">Version N</h1>
+      <h1 class="col-6">Version O</h1>
     </div>
     
     <!--Testing Buttons-->
@@ -115,7 +115,7 @@
                 document.getElementById('row' + j.toString()).innerHTML = initContGRE + "<div class='col-1 edgeElement' id='col" + i.toString() + '-' + j.toString() + "'></div>";
               } else {
                 var initContG = document.getElementById('row' + j.toString()).innerHTML;
-                document.getElementById('row' + j.toString()).innerHTML = initContG + "<div class='col-1 grassElement' id='col" + i.toString() + '-' + j.toString() + "'></div>";
+                document.getElementById('row' + j.toString()).innerHTML = initContG + "<button onClick='alertGrass()' class='col-1 grassElement' id='col" + i.toString() + '-' + j.toString() + "'></button>";
               }
             }
           }
@@ -232,6 +232,9 @@
       function regenerate() {
         eraseC();
         generate();
+      }
+      function alertGrass() {
+        window.alert('grass');
       }
     </script>
   </body>
