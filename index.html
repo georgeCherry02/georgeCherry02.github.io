@@ -130,7 +130,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.002.007</h3>
+      <h3 class="col-6" id='version'>Version 0.002.008</h3>
       <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
     </div>
@@ -146,9 +146,9 @@
     <div class='row buildMenu' id='buildMenu' style='display:none;'>
       <form class='row buildIcons'>
         <div class='col-4'></div>
-        <input type='radio' name='build' id='tent' class='col-2 buildIcon'>
-        <input type='radio' name='build' id='forester' class='col-2 buildIcon'>
-        <input type='radio' name='build' id='miner' class='col-2 buildIcon'>
+        <input type='radio' name='buildT' id='tent' class='col-2 buildIcon'>
+        <input type='radio' name='buildT' id='forester' class='col-2 buildIcon'>
+        <input type='radio' name='buildT' id='miner' class='col-2 buildIcon'>
         <button type='button' class='col-2' onClick='buildTile()' id='buildMenuButton'>Build</button>
       </form>
     </div>
@@ -291,7 +291,7 @@
       }
       function tileBuild(pos) {
         showBuildMenu();
-        document.getElementById('buildMenuButton').setAttribute('onClick','buildTile('+pos+')');
+        document.getElementById('buildMenuButton').setAttribute('onClick','buildTile("'+pos+'")');
       }
       function hideBuildMenu() {
         document.getElementById('buildMenu').setAttribute('style','display:none;');
