@@ -158,7 +158,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.002.016</h3>
+      <h3 class="col-6" id='version'>Version 0.002.017</h3>
       <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
     </div>
@@ -346,6 +346,7 @@
       function checkSurround(checkPos,checkFor) {
         var posX = checkPos.slice(3,4);
         var posY = checkPos.slice(6,7);
+        window.alert(posX + ' ' + posY);
         var presence = 0;
         for (i=posX-1;i<posX+2;i++) {
           for (j=posY-1;i<posY+2;j++) {
