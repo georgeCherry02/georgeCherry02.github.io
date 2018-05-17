@@ -130,7 +130,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.002.002</h3>
+      <h3 class="col-6" id='version'>Version 0.002.003</h3>
       <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
     </div>
@@ -146,9 +146,9 @@
     <div class='row buildMenu' id='buildMenu' style='display:none;'>
       <div class='row buildIcons'>
         <div class='col-6'></div>
-        <input type='radio' name='build' value='tent' class='col-2 buildIcon'>
-        <input type='radio' name='build' value='forester' class='col-2 buildIcon'>
-        <input type='radio' name='build' value='miner' class='col-2 buildIcon'>
+        <input type='radio' name='build' id='tent' class='col-2 buildIcon'>
+        <input type='radio' name='build' id='forester' class='col-2 buildIcon'>
+        <input type='radio' name='build' id='miner' class='col-2 buildIcon'>
       </div>
     </div>
     <div class='buildMenuHole' id='buildMenuHole' style='display:none;'>
@@ -290,6 +290,13 @@
       }
       function returnPos(pos) {
         showBuildMenu();
+        if (document.getElementById('tent').checked) {
+          window.alert('tent');
+        } else if (document.getElementById('forester').checked) {
+          window.alert('forester');
+        } else if (document.getElementById('miner').checked) {
+          window.alert('miner');
+        }
       }
       function hideBuildMenu() {
         document.getElementById('buildMenu').setAttribute('style','display:none;');
