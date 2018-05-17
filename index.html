@@ -25,16 +25,17 @@
   /*Defining columns*/
   .col-1 {width: 1.92%;}
   .col-2 {width: 16.66%;}
-  .col-3 {width: 25%}
-  .col-4 {width: 33.33%}
-  .col-5 {width: 41.66%}
-  .col-6 {width: 50%}
-  .col-7 {width: 58.33%}
-  .col-8 {width: 66.66%}
-  .col-9 {width: 75%} 
-  .col-10 {width: 83.33%} 
-  .col-11 {width: 91.66%} 
-  .col-12 {width: 100%}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;} 
+  .col-10 {width: 83.33%;} 
+  .col-11 {width: 91.66%;} 
+  .col-12 {width: 100%;}
+  .col-13 {width: 8.33%;}
   
   /*Making columns behave*/
   [class*="col-"] {
@@ -122,6 +123,12 @@
     margin: 0px;
     padding-top: 10px;
   }
+  button.exit {
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
   
   /*Accomodating the build menu*/
   .buildMenuHole {
@@ -141,7 +148,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.002.009</h3>
+      <h3 class="col-6" id='version'>Version 0.002.010</h3>
       <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
     </div>
@@ -155,15 +162,17 @@
     
     <!--Build menu-->
     <div class='row buildMenu' id='buildMenu' style='display:none;'>
+      <div class='row buildButtons'>
+        <button class='col-2' onClick='buildTile()' id='buildMenuButton'>Build</button>
+        <div class='col-9'></div>
+        <button class='col-13 exit' onClick='hideBuildMenu()'>X</button>
       <div class='row buildIcons'>
-        <div class='col-4'></div>
         <input type='radio' name='buildT' id='tent' class='col-2 buildIcon'>
-        <label for='tent'>Tent</label>
+        <label for='tent' class='col-2'>Tent</label>
         <input type='radio' name='buildT' id='forester' class='col-2 buildIcon'>
-        <label for='forester'>Forester's Hut</label>
+        <label for='forester' class='col-2'>Forester's Hut</label>
         <input type='radio' name='buildT' id='miner' class='col-2 buildIcon'>        
-        <label for='miner'>Mine</label>
-        <button type='button' class='col-2' onClick='buildTile()' id='buildMenuButton'>Build</button>
+        <label for='miner' class='col-2'>Mine</label>
       </div>
     </div>
     <div class='buildMenuHole' id='buildMenuHole' style='display:none;'>
