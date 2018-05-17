@@ -135,8 +135,7 @@
     background-color: red;
     color: white;
     border: 1px solid black;
-    border-radius 5px;
-    margin-left: 5px;
+    border-radius: 5px;
   }
   label.buildLabel {
     border: none;
@@ -161,7 +160,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.002.034</h3>
+      <h3 class="col-6" id='version'>Version 0.002.035</h3>
       <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
     </div>
@@ -177,8 +176,9 @@
     <div class='row buildMenu' id='buildMenu' style='display:none;'>
       <div class='row buildButtons'>
         <button class='col-2' onClick='buildTile()' id='buildMenuButton'>Build</button>
+        <div class='col-13'></div>
         <button class='col-2' onClick='deleteTile()' id='deleteMenuButton'>Delete</button>
-        <div class='col-7'></div>        
+        <div class='col-6'></div>        
         <button class='col-13 exit' onClick='hideBuildMenu()'>X</button>
       <div class='row buildIcons'>
         <input type='radio' name='buildT' id='keep' class='col-1 buildIcon'>
