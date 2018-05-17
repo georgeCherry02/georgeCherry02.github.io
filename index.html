@@ -135,7 +135,7 @@
     border: 1px solid black;
     border-radius: 5px;
   }
-  button.buildLabel {
+  label.buildLabel {
     border: none;
     text-align: center;
   }
@@ -158,7 +158,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.002.012</h3>
+      <h3 class="col-6" id='version'>Version 0.002.013</h3>
       <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
     </div>
@@ -335,14 +335,27 @@
         document.getElementById('buildMenuHole').setAttribute('style','');    
       }
       function buildTile(buildPos) {
-        if (document.getElementById('tent').checked) {
+        if ((document.getElementById('tent').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))) {
           document.getElementById(buildPos).className+=' tent';
-        } else if (document.getElementById('forester').checked) {
+        } else if ((document.getElementById('forester').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))&&(checkSurround(buildPos,'treeElement')>2;)) {
           document.getElementById(buildPos).className+=' forester';
-        } else if (document.getElementById('miner').checked) {
+        } else if ((document.getElementById('miner').checked)&&()) {
           document.getElementById(buildPos).className+=' miner';
         }
       }
+      function checkSurround(checkPos,checkFor) {
+        var posX = checkPos.slice(3,4);
+        var posY = checkPos.slice(6,7);
+        var presence = 0;
+        for (i=posX-1;i<posX+2;i++) {
+          for (j=posY-1;i<posY+2;j++) {
+            if document.getElementById('col' + i.toString() + '-' + j.toString()).classList.contains(checkFor) {
+              presence++;
+            }
+          }
+        }
+        return presence;
+      }            
         
     </script>
   </body>
