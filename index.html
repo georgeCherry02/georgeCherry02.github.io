@@ -50,11 +50,27 @@
     display: table;
   }
   
-  /*grassElement style*/
+  /*Natural element style*/
   .grassElement {
     text-align: center;
     background-color: #0a911e;
     padding: 0.96%;
+  }
+  .waterElement {
+    background-color: #43acf2;
+    padding: 0.96%;
+  }
+  .stoneElement {
+    background-color: #ccc;
+    padding: 0.96%;
+  }
+  .treeElement {
+    background-color: #02702a;
+    padding: 0.96%;
+  }
+  .edgeElement {
+    background-color: #eee;
+    padding: 0.96%
   }
   
   /*Making grass glow*/
@@ -62,43 +78,7 @@
     background-color: #39ce43;
   }
   
-  /*Making grass pressed nicer*/
-  grassElement:active {
-    text-align: center;
-    background-color: #0a911e;
-    padding: 0.96%;
-  }
-  grassElement:focus {
-    text-align: center;
-    background-color: #0a911e;
-    padding: 0.96%;
-  }
-  
-  /*waterElement style*/
-  .waterElement {
-    background-color: #43acf2;
-    padding: 0.96%;
-  }
-  
-  /*stoneElement style*/
-  .stoneElement {
-    background-color: #ccc;
-    padding: 0.96%;
-  }
-  
-  /*treeElement style*/
-  .treeElement {
-    background-color: #02702a;
-    padding: 0.96%;
-  }
-  
-  /*edgeElement style*/
-  .edgeElement {
-    background-color: #eee;
-    padding: 0.96%
-  }
-  
-  /*Building colour settings*/
+  /*Building style*/
   button.tent {
     background-color: #afad69;
   }
@@ -107,6 +87,12 @@
   }
   button.miner {
     background-color: #5d605d;
+  }
+  button.keepCore {
+    background-color: #888;
+  }
+  button.keepWall {
+    background-color: #bbb;
   }
   
   /*buildMenu style*/
@@ -158,7 +144,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.002.026</h3>
+      <h3 class="col-6" id='version'>Version 0.002.027</h3>
       <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
     </div>
@@ -348,8 +334,8 @@
         } else if ((document.getElementById('miner').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))&&(checkSurround(buildPos,'stoneElement',1)>0)) {
           document.getElementById(buildPos).className+=' miner';
         } else if ((document.getElementById('keep').checked)&&(checkSurround(buildPos,'grassElement',1)==9)) {
-          var posX = Number(checkPos.slice(3,5));
-          var posY = Number(checkPos.slice(6,8));
+          var posX = Number(buildPos.slice(3,5));
+          var posY = Number(buildPos.slice(6,8));
           for (i=posX-1;i<posX+2;i++) {
             for (j=posY-1;j<posY+2;j++) {
               if (i==posX&&j==posY) {
