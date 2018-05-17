@@ -129,6 +129,12 @@
     border: 1px solid black;
     border-radius: 5px;
   }
+  button#buildMenuButton {
+    background-color: blue;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+  }    
   
   /*Accomodating the build menu*/
   .buildMenuHole {
@@ -148,7 +154,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.002.010</h3>
+      <h3 class="col-6" id='version'>Version 0.002.011</h3>
       <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
     </div>
@@ -167,12 +173,12 @@
         <div class='col-9'></div>
         <button class='col-13 exit' onClick='hideBuildMenu()'>X</button>
       <div class='row buildIcons'>
-        <input type='radio' name='buildT' id='tent' class='col-2 buildIcon'>
-        <label for='tent' class='col-2'>Tent</label>
-        <input type='radio' name='buildT' id='forester' class='col-2 buildIcon'>
-        <label for='forester' class='col-2'>Forester's Hut</label>
-        <input type='radio' name='buildT' id='miner' class='col-2 buildIcon'>        
-        <label for='miner' class='col-2'>Mine</label>
+        <input type='radio' name='buildT' id='tent' class='col-1 buildIcon'>
+        <label for='tent' class='col-13'>Tent</label>
+        <input type='radio' name='buildT' id='forester' class='col-1 buildIcon'>
+        <label for='forester' class='col-13'>Forester's Hut</label>
+        <input type='radio' name='buildT' id='miner' class='col-1 buildIcon'>        
+        <label for='miner' class='col-13'>Mine</label>
       </div>
     </div>
     <div class='buildMenuHole' id='buildMenuHole' style='display:none;'>
