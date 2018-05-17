@@ -131,6 +131,13 @@
     border: 1px solid black;
     border-radius: 5px;
   }
+  button#deleteMenuButton {
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    border-radius 5px;
+    margin-left: 5px;
+  }
   label.buildLabel {
     border: none;
     text-align: center;
@@ -154,7 +161,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.002.033</h3>
+      <h3 class="col-6" id='version'>Version 0.002.034</h3>
       <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
     </div>
@@ -170,7 +177,8 @@
     <div class='row buildMenu' id='buildMenu' style='display:none;'>
       <div class='row buildButtons'>
         <button class='col-2' onClick='buildTile()' id='buildMenuButton'>Build</button>
-        <div class='col-9'></div>
+        <button class='col-2' onClick='deleteTile()' id='deleteMenuButton'>Delete</button>
+        <div class='col-7'></div>        
         <button class='col-13 exit' onClick='hideBuildMenu()'>X</button>
       <div class='row buildIcons'>
         <input type='radio' name='buildT' id='keep' class='col-1 buildIcon'>
@@ -192,6 +200,9 @@
     </div>
     
     <script>
+      
+      //Natural generation functions
+      
       function generateLand() {
         for (j=0;j<52;j++) {
           var initContGT = document.getElementById('grid').innerHTML;
@@ -324,9 +335,13 @@
         eraseC();
         generate();
       }
+      
+      //Building functions      
+      
       function tileBuild(pos) {
         showBuildMenu();
         document.getElementById('buildMenuButton').setAttribute('onClick','buildTile("'+pos+'")');
+        document.getElementById('deleteMenuButton').setAttribute('onClick','deleteTile("'+pos+'")');
       }
       function hideBuildMenu() {
         document.getElementById('buildMenu').setAttribute('style','display:none;');
@@ -360,6 +375,10 @@
         } else if ((document.getElementById('path').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))) {
           document.getElementById(buildPos).className+=' path';
         }
+      }
+      function deleteTile(deletePos) {
+        var tile = document.getElementById(deletePos);
+        tile.className = 'col-1 grassElement';
       }
       function checkSurround(checkPos,checkFor,r) {
         var posX = Number(checkPos.slice(3,5));
