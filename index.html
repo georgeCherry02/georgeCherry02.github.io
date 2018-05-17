@@ -347,7 +347,11 @@
           document.getElementById(buildPos).className+=' forester';
         } else if ((document.getElementById('miner').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))&&(checkSurround(buildPos,'stoneElement',1)>0)) {
           document.getElementById(buildPos).className+=' miner';
-        }
+        } else if (document.getElementById('keep').checked) {
+        
+        } else if (document.getElementById('wall').checked) {
+        
+        } else
       }
       function checkSurround(checkPos,checkFor,r) {
         var posX = Number(checkPos.slice(3,5));
