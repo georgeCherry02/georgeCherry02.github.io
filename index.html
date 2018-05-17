@@ -144,7 +144,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.002.027</h3>
+      <h3 class="col-6" id='version'>Version 0.002.028</h3>
       <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
     </div>
@@ -341,7 +341,7 @@
               if (i==posX&&j==posY) {
                 document.getElementById(buildPos).className+=' keepCore';
               } else {
-                document.getElementById(buildPos).className+=' keepWall';
+                document.getElementById('col' + i.toString() + '-' + j.toString()).className+=' keepWall';
               }
             }
           }            
