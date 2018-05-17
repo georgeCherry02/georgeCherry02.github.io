@@ -130,7 +130,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.002.004</h3>
+      <h3 class="col-6" id='version'>Version 0.002.005</h3>
       <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
     </div>
@@ -144,11 +144,11 @@
     
     <!--Build menu-->
     <div class='row buildMenu' id='buildMenu' style='display:none;'>
-      <form class='row buildIcons'>
+      <form class='row buildIcons' id='buildMenuForm' onSubmit='build()'>
         <div class='col-4'></div>
-        <input type='radio' name='build' value='tent' class='col-2 buildIcon'>
-        <input type='radio' name='build' value='forester' class='col-2 buildIcon'>
-        <input type='radio' name='build' value='miner' class='col-2 buildIcon'>
+        <input type='radio' name='build' id='tent' class='col-2 buildIcon'>
+        <input type='radio' name='build' id='forester' class='col-2 buildIcon'>
+        <input type='radio' name='build' id='miner' class='col-2 buildIcon'>
         <button type='submit' class='col-2'>Build</button>
       </form>
     </div>
@@ -171,7 +171,7 @@
                 document.getElementById('row' + j.toString()).innerHTML = initContGRE + "<div class='col-1 edgeElement' id='col" + i.toString() + '-' + j.toString() + "'></div>";
               } else {
                 var initContG = document.getElementById('row' + j.toString()).innerHTML;
-                document.getElementById('row' + j.toString()).innerHTML = initContG + "<button onClick='returnPos(this.id)' class='col-1 grassElement' id='col" + i.toString() + '-' + j.toString() + "'></button>";
+                document.getElementById('row' + j.toString()).innerHTML = initContG + "<button onClick='tileBuild(this.id)' class='col-1 grassElement' id='col" + i.toString() + '-' + j.toString() + "'></button>";
               }
             }
           }
@@ -289,8 +289,9 @@
         eraseC();
         generate();
       }
-      function returnPos(pos) {
+      function tileBuild(pos) {
         showBuildMenu();
+        document.getElementById('buildMenuForm').setAttribute('onSubmit','build('+pos+')');
       }
       function hideBuildMenu() {
         document.getElementById('buildMenu').setAttribute('style','display:none;');
@@ -300,6 +301,16 @@
         document.getElementById('buildMenu').setAttribute('style','');
         document.getElementById('buildMenuHole').setAttribute('style','');    
       }
+      function build(buildPos) {
+        if (document.getElementById('tent').checked) {
+          document.getElementById(buildPos).className+=' tent';
+        } else if (document.getElementById('forester').checked) {
+          document.getElementById(buildPos).className+=' forester';
+        } else if (document.getElementById('miner').checked) {
+          document.getElementById(buildPos).className+=' miner';
+        }
+      }
+        
     </script>
   </body>
 </html>
