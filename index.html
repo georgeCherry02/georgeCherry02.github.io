@@ -106,7 +106,10 @@
     background-color: #ccc;
     z-index: 5;
     border: 2px solid #02702a;
-  } 
+  }
+  .buildIcon {
+    margin: 0px;
+  }
   
   /*Accomodating the build menu*/
   .buildMenuHole {
@@ -126,7 +129,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version S</h3>
+      <h3 class="col-6" id='version'>Version T</h3>
       <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
     </div>
@@ -142,9 +145,9 @@
     <div class='row buildMenu' id='buildMenu' style='display:none;'>
       <div class='row buildIcons'>
         <div class='col-6'></div>
-        <input type='radio' name='build' value='tent' class='col-2'>
-        <input type='radio' name='build' value='forester' class='col-2'>
-        <input type='radio' name='build' value='miner' class='col-2'>
+        <input type='radio' name='build' value='tent' class='col-2 buildIcon'>
+        <input type='radio' name='build' value='forester' class='col-2 buildIcon'>
+        <input type='radio' name='build' value='miner' class='col-2 buildIcon'>
       </div>
     </div>
     <div class='buildMenuHole' id='buildMenuHole' style='display:none;'>
