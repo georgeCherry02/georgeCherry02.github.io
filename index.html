@@ -20,7 +20,6 @@
   #version {
     border: 0px;
   }
-  #
   
   /*Defining columns*/
   .col-1 {width: 1.92%;}
@@ -160,9 +159,10 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.002.035</h3>
-      <button class='col-2' onClick='regenerate()' id='testButton'>Regenerate</button>
-      <button class='col-2' onClick='hideBuildMenu()' id='testButton'>Hide menu</button>
+      <h3 class="col-6" id='version'>Version 0.002.036</h3>
+      <button class='col-2' onClick='regenerate()'>Regenerate</button>
+      <button class='col-2' onClick='hideBuildMenu()'>Hide menu</button>
+      <button class='col-2' onClick='start()'>Start</button>
     </div>
     
     <!--Testing Buttons-->
@@ -392,7 +392,19 @@
           }
         }
         return presence;
-      }            
+      }
+      
+      //Time dependent functions
+      
+      function start() {
+        var tick = setInterval(timeDependent, 3000);
+      }
+      function timeDependent() {
+        greet();
+      }
+      function greet() {
+        window.alert('hello');
+      }
         
     </script>
   </body>
