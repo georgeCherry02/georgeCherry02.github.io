@@ -157,10 +157,13 @@
     background-color: yellow;
   }
   p#wood {
-    background-color: brown;
+    background-color: #7c591b;
   }
   p#stone {
     background-color: #ccc;
+  }
+  p#workPop {
+    background-color: red;
   }
   
   /*Accomodating the build menu*/
@@ -181,7 +184,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.003.004</h3>
+      <h3 class="col-6" id='version'>Version 0.003.005</h3>
       <button class='col-2' onClick='regenerate()'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()'>Hide menu</button>
       <button class='col-2' onClick='start()'>Start</button>
@@ -221,6 +224,7 @@
         <p class='col-2 statIcon' id='money'></p>
         <p class='col-2 statIcon' id='wood'></p>
         <p class='col-2 statIcon' id='stone'></p>
+        <p class='col-3 statIcon' id='workPop'></p>
       </div>
     </div>
     <div class='buildMenuHole' id='buildMenuHole' style='display:none;'>
@@ -382,7 +386,7 @@
       function buildTile(buildPos) {
         if ((document.getElementById('tent').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))) {
           document.getElementById(buildPos).className+=' tent';
-        } else if ((document.getElementById('forester').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))&&(checkSurround(buildPos,'treeElement',1)>2)&&(!(checkSurround(buildPos,'forester',4)))) {
+        } else if ((document.getElementById('forester').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))&&(checkSurround(buildPos,'treeElement',1)>2)&&(checkSurround(buildPos,'forester',3)<1)) {
           document.getElementById(buildPos).className+=' forester';
         } else if ((document.getElementById('miner').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))&&(checkSurround(buildPos,'stoneElement',1)>0)) {
           document.getElementById(buildPos).className+=' miner';
@@ -436,6 +440,7 @@
       //Global economy values
       
       var population = 0;
+      var workPop = 0;
       var money = 0;
       var wood = 0;
       var stone = 0;
@@ -448,23 +453,27 @@
         document.getElementById('money').innerHTML = 'Money: ' + money.toString();
         document.getElementById('wood').innerHTML = 'Wood: ' + wood.toString();
         document.getElementById('stone').innerHTML = 'Stone: ' + stone.toString();
+        document.getElementById('idlePop').innerHTML = 'Idle population: ' + (population-workPop).toString();
       }
       
       function economyCalc() {
+        workPop = 0;
         for (a=0;a<3;a++) {
           switch (a) {
             case (0):
               var count = countTileValue('tent');
-              population+= count;
+              population = count;
               money+= count;
               break;
             case (1):
               var count = countTileValue('forester');
               wood+= count;
+              workPop+= count;
               break;
             case (2):
               var count = countTileValue('miner');
               stone+= count;
+              workPop+= count;
           }
         }
       }
