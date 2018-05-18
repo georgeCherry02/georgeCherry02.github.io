@@ -184,7 +184,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.003.010</h3>
+      <h3 class="col-6" id='version'>Version 0.003.011</h3>
       <button class='col-2' onClick='regenerate()'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()'>Hide menu</button>
       <button class='col-2' onClick='start()'>Start</button>
@@ -388,10 +388,10 @@
           document.getElementById(buildPos).className+=' tent';
         } else if ((document.getElementById('forester').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))&&(checkSurround(buildPos,'treeElement',1)>2)&&(checkSurround(buildPos,'forester',3)<1)&&(idlePop>0)) {
           document.getElementById(buildPos).className+=' forester';
-        } else if ((document.getElementById('miner').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))&&(checkSurround(buildPos,'stoneElement',1)>0)&&(idlePop>0)&&(wood>9)) {
+        } else if ((document.getElementById('miner').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))&&(checkSurround(buildPos,'stoneElement',1)>0)&&(idlePop>0)&&(wood>14)) {
           document.getElementById(buildPos).className+=' miner';
-          wood-= 10;
-        } else if ((document.getElementById('keep').checked)&&(checkSurround(buildPos,'grassElement',1)==9)) {
+          wood-=15;
+        } else if ((document.getElementById('keep').checked)&&(checkSurround(buildPos,'grassElement',1)==9)&&(keepPresent==0)&&(stone>99)&&(wood>49)&&(population>9)) {
           var posX = Number(buildPos.slice(3,5));
           var posY = Number(buildPos.slice(6,8));
           for (i=posX-1;i<posX+2;i++) {
@@ -402,7 +402,10 @@
                 document.getElementById('col' + i.toString() + '-' + j.toString()).className+=' keepWall';
               }
             }
-          }            
+          }
+          keepPresent++;
+          stone-=100;
+          wood-=50;
         } else if ((document.getElementById('wall').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))) {
           document.getElementById(buildPos).className+=' wall';
         } else if ((document.getElementById('path').checked)&&(document.getElementById(buildPos).classList.contains('grassElement'))) {
@@ -440,6 +443,7 @@
       
       //Global economy values
       
+      var keepPresent = 0;
       var population = 0;
       var workPop = 0;
       var money = 0;
@@ -456,7 +460,6 @@
         document.getElementById('wood').innerHTML = 'Wood: ' + wood.toString();
         document.getElementById('stone').innerHTML = 'Stone: ' + stone.toString();
         document.getElementById('idlePop').innerHTML = 'Idle population: ' + idlePop.toString();
-        window.alert(idlePop.toString());
       }
       
       function economyCalc() {
@@ -466,7 +469,9 @@
             case (0):
               var count = countTileValue('tent');
               population = count;
-              money+= count;
+              if (keepPresent==1) {
+                money+= count;
+              }
               break;
             case (1):
               var count = countTileValue('forester');
