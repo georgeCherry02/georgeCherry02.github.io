@@ -184,7 +184,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.003.011</h3>
+      <h3 class="col-6" id='version'>Version 0.003.012</h3>
       <button class='col-2' onClick='regenerate()'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()'>Hide menu</button>
       <button class='col-2' onClick='start()'>Start</button>
@@ -263,11 +263,21 @@
             for (i=waterLocX-2;i<waterLocX+3;i++) {
               if (i==waterLocX-2 || i==waterLocX+2) {
                 for (j=waterLocY-1;j<waterLocY+2;j++) {
-                  document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
+                  var waterPres = Math.floor(Math.random()*100)+1;
+                  if (waterPres<61) {
+                    document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
+                  }
                 }
               } else {
                 for (j=waterLocY-2;j<waterLocY+3;j++) {
-                  document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
+                  if (j==waterLocY-2||j==waterLocY+2) {
+                    var waterPres = Math.floor(Math.random()*100)+1;
+                    if (waterPres<61) {
+                      document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
+                    }
+                  } else {
+                    document.getElementById('col' + i.toString() + '-' + j.toString()).className = 'col-1 waterElement';
+                  }
                 }
               }
             }
