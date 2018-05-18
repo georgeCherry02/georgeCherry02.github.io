@@ -162,7 +162,7 @@
   p#stone {
     background-color: #ccc;
   }
-  p#workPop {
+  p#idlePop {
     background-color: red;
   }
   
@@ -184,7 +184,7 @@
     
     <!--Version Declaration-->
     <div class='row header'>
-      <h3 class="col-6" id='version'>Version 0.003.005</h3>
+      <h3 class="col-6" id='version'>Version 0.003.006</h3>
       <button class='col-2' onClick='regenerate()'>Regenerate</button>
       <button class='col-2' onClick='hideBuildMenu()'>Hide menu</button>
       <button class='col-2' onClick='start()'>Start</button>
@@ -224,7 +224,7 @@
         <p class='col-2 statIcon' id='money'></p>
         <p class='col-2 statIcon' id='wood'></p>
         <p class='col-2 statIcon' id='stone'></p>
-        <p class='col-3 statIcon' id='workPop'></p>
+        <p class='col-3 statIcon' id='idlePop'></p>
       </div>
     </div>
     <div class='buildMenuHole' id='buildMenuHole' style='display:none;'>
@@ -449,11 +449,12 @@
       
       function displayEcon() {
         economyCalc();
+        var idlePop = population-workPop;
         document.getElementById('pop').innerHTML = 'Population: ' + population.toString();
         document.getElementById('money').innerHTML = 'Money: ' + money.toString();
         document.getElementById('wood').innerHTML = 'Wood: ' + wood.toString();
         document.getElementById('stone').innerHTML = 'Stone: ' + stone.toString();
-        document.getElementById('idlePop').innerHTML = 'Idle population: ' + (population-workPop).toString();
+        document.getElementById('idlePop').innerHTML = 'Idle population: ' + idlePop.toString();
       }
       
       function economyCalc() {
