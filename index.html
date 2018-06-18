@@ -26,10 +26,16 @@
     float: left;
   }
   
+  /*Row formatting*/
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
   /*Working on header*/
   .header{
     width: 100%;
-    display: inline-block;
   }
   h3 {
     border: 0px;
@@ -41,14 +47,12 @@
   .gridContainer {
     width: 100%;
     justify-content: center;
-    display: inline-block;
   }
   
   /*Grid*/
   #grid {
     justify-content: center;
     text-align: center;
-    text-justify: center;
   }
 </style>
 <html>
@@ -57,12 +61,12 @@
   </head>  
   <body>
     
-    <div class='header'>
-      <h3 class="col-4">Version 0.013</h3>
-      <button class='col-2' onClick='test()'>Try me</button>
+    <div class='row header'>
+      <h3 class="col-4">Version 0.014</h3>
+      <button class='col-2' onClick='generateGrid()'>Try me</button>
     </div>
     
-    <div class='gridContainer'>
+    <div class='row gridContainer'>
       <div id='grid'>
       </div>
     </div>
@@ -70,6 +74,16 @@
     <script>
       function test() {
         document.getElementById('grid').innerHTML="<h1>Sup</h1>";
+      }
+      function generateGrid() {
+        for (j=0;j<5;j++) {
+          var initRowCont = document.getElementById('grid').innerHTML;
+          document.getElementById('grid').innerHTML = initCont + "<div class='row' id='row-" + j.toString() + "'></div>";
+          for (i=0;i<5;i++) {
+            var initColCont = document.getElementById('row-'+j.toString()).innerHTML;
+            document.getElementById('row-'+j.toString()).innerHTML = initColCont + "<button class='col-h' id='loc-" + i.toString() + j.toString() + "'></button>"
+          }
+        }
       }
     </script>
     
