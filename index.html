@@ -62,7 +62,7 @@
   <body>
     
     <div class='row header'>
-      <h3 class="col-4">Version 0.014</h3>
+      <h3 class="col-4">Version 0.015</h3>
       <button class='col-2' onClick='generateGrid()'>Try me</button>
     </div>
     
@@ -78,7 +78,7 @@
       function generateGrid() {
         for (j=0;j<5;j++) {
           var initRowCont = document.getElementById('grid').innerHTML;
-          document.getElementById('grid').innerHTML = initCont + "<div class='row' id='row-" + j.toString() + "'></div>";
+          document.getElementById('grid').innerHTML = initRowCont + "<div class='row' id='row-" + j.toString() + "'></div>";
           for (i=0;i<5;i++) {
             var initColCont = document.getElementById('row-'+j.toString()).innerHTML;
             document.getElementById('row-'+j.toString()).innerHTML = initColCont + "<button class='col-h' id='loc-" + i.toString() + j.toString() + "'></button>"
