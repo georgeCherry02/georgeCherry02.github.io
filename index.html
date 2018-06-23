@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <style>
-  /*General formatting*/
-  * {
-    box-sizing: border-box;
-  }
+  
+  /*Formating page*/
   body {
     margin: 0px;
   }
+  * {
+    box-sizing: border-box;
+  }
   
-  /*Column formatting*/
-  .col-h {width: 1%;}
+  /*Making column,row format*/
+  /*Columns*/
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
   .col-3 {width: 25%;}
@@ -25,71 +26,24 @@
   [class*="col-"] {
     float: left;
   }
-  
-  /*Row formatting*/
+  /*Rows*/
   .row::after {
     content: "";
     clear: both;
     display: table;
   }
   
-  /*Working on header*/
-  .header{
+  /*Header*/
+  .header {
+    position: fixed;
     width: 100%;
-  }
-  h3 {
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
-  }
+    
   
-  /*Grid container*/
-  .gridContainer {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  /*Grid formatting*/
-  .gridRow {
-    align-content: center;
-  }
-  .gpad {
-    padding: 16.64%;
-  }
 </style>
+
 <html>
-  <head>
-    <title>Testing out Javascript 2.0</title>
-  </head>  
-  <body>
-    
-    <div class='row header'>
-      <h3 class="col-4">Version 0.018</h3>
-      <button class='col-2' onClick='generateGrid()'>Try me</button>
-    </div>
-    
-    <div class='row gridContainer'>
-      <div class='col-4 gpad'></div>
-      <div class='col-4' id='grid'>
-      </div>
-      <div class='col-4 gpad'></div>
-    </div>
-    
-    <script>
-      function test() {
-        document.getElementById('grid').innerHTML="<h1>Sup</h1>";
-      }
-      function generateGrid() {
-        for (j=0;j<5;j++) {
-          var initRowCont = document.getElementById('grid').innerHTML;
-          document.getElementById('grid').innerHTML = initRowCont + "<div class='row gridRow' id='row-" + j.toString() + "'></div>";
-          for (i=0;i<5;i++) {
-            var initColCont = document.getElementById('row-'+j.toString()).innerHTML;
-            document.getElementById('row-'+j.toString()).innerHTML = initColCont + "<button class='col-h' id='loc-" + i.toString() + j.toString() + "'></button>"
-          }
-        }
-      }
-    </script>
-    
-  </body>
+  <div class='row header'>
+    <h3>Version 0.001</h3>
+    <p>Is this going to work</p>
+  </div>
 </html>
