@@ -1,10 +1,10 @@
 /*Formating page*/
   body {
     margin: 0px;
+    background-color: #ccc;
   }
   * {
     box-sizing: border-box;
-    background-color: #ccc;
   }
   
 /*Making column,row format*/
