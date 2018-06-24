@@ -9,10 +9,8 @@
 }
 .questionCard {
   /*Positioning*/
-  padding: 20%;
-  border: none;
   width: 60%;
-  height: 30%;
+  height: 10%;
   position: relative;
   margin: auto;
   /*Appearance*/
