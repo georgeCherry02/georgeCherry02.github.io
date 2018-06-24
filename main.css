@@ -60,7 +60,7 @@
     margin: 5px;
   }
   /*Home*/
-  .home {
+  #home {
     text-align: right;
     margin: 5px;
   }
@@ -77,9 +77,9 @@
   }
   /*Buttons*/
   #learn{
-    color: blue;
+    
   }
-  .create{
+  #create{
   
   }
   
