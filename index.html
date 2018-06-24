@@ -16,12 +16,12 @@
     <!--Main buttons-->
     <div class='row mainBody'>
       <button class='col-12' id='learn'>Learn</button>
-      <button class='col-12 create'>Create</button>
+      <button class='col-12' id='create'>Create</button>
     </div>
     
     <!--Footer-->
     <div class='row bar footer'>
-      <p class='col-12 footerText'>Version 0.027</p>
+      <p class='col-12 footerText'>Version 0.028</p>
     </div>
     
     <!--Script-->
@@ -29,6 +29,9 @@
       //Making buttons work
       document.getElementById('learn').onclick = function() {
         location.href = 'list.html';
+      }
+      document.getElementById('create').onclick = function() {
+        location.href = 'create.html';
       }
     </script>
     
