@@ -8,8 +8,15 @@
   align-content: center;
 }
 .questionCard {
-  width: 100%;
+  /*Positioning*/
   padding: 20%;
-  background-color: #255eba;
   border: none;
+  width: 60%;
+  height: 30%;
+  position: relative;
+  margin: auto;
+  /*Appearance*/
+  border-radius: 10px;
+  border: 1px solid #686868;
+  background-color: #ddd;
 }
