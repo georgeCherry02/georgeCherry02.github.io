@@ -1,3 +1,11 @@
+.cardArea {
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  background-color: red;
+}
 .questionCard {
+  width: 100%;
+  padding: 20%;
   background-color: red;
 }
