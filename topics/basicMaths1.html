@@ -2,13 +2,41 @@
 <html>
 
   <head>
-  
+    
+    <title>temp</title>
+    
     <link rel='stylesheet' href='css/main.css' type='text/css'/>
     <link rel='stylesheet' href='css/question.css' type='text/css'/>
     
   </head>
   
   <body>
+    
+    <!--Header-->
+    <div class='row bar header'>
+      <h3 class='col-8 headerText'>Basic Maths II</h3>
+      <button class='col-2' id='goBack'>Go back</button>
+      <button class='col-2' id='goHome'>Go Home</button>
+    </div>
+    <!--Body-->
+    <div class='cardArea'>
+      <button class='questionCard'>What's 1+1?</button>
+    </div>
+    <!--Footer-->
+    <div class='row bar footer'>
+      <p class='footerText'>Version 0.001</p>
+    </div>
+    <!--Script-->
+    <script>
+      //Return buttons
+      document.getElementById('goBack') = function() {
+        location.href = 'topics.html';
+      }
+      document.getElementById('goHome') = function() {
+        location.href = 'index.html';
+      }
+    </script>      
+                
   </body>
   
 </html>
