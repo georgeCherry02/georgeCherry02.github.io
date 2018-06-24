@@ -2,10 +2,12 @@
   width: 100%;
   position: absolute;
   top: 10%;
-  background-color: red;
+  height: 85%;
+  background-color: #ccc;
+  align-content: center;
 }
 .questionCard {
   width: 100%;
   padding: 20%;
-  background-color: red;
+  background-color: #255eba;
 }
