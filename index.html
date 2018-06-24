@@ -15,14 +15,22 @@
     
     <!--Main buttons-->
     <div class='row mainBody'>
-      <button class='col-12 learn' href='list.html'>Learn</button>
+      <button class='col-12' id='learn'>Learn</button>
       <button class='col-12 create'>Create</button>
     </div>
     
     <!--Footer-->
     <div class='row bar footer'>
-      <p class='col-12 footerText'>Version 0.023</p>
+      <p class='col-12 footerText'>Version 0.024</p>
     </div>
+    
+    <!--Script-->
+    <script>
+      //Making buttons work
+      document.getElementById('learn').onclick = function() {
+        location.href = 'list.html';
+      }
+    </script>
     
   </body>
 </html>
