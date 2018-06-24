@@ -59,8 +59,13 @@
     text-align: right;
     margin: 5px;
   }
+  /*Home*/
+  .home {
+    text-align: right;
+    margin: 5px;
+  }
   
-/*Formatting main content*/
+/*Formatting home page content*/
   /*Main body of content*/
   .mainBody {
     position: absolute;
