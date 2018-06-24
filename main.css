@@ -69,12 +69,7 @@
 /*Formatting home page content*/
   /*Main body of content*/
   .mainBody {
-    position: absolute;
-    top: 10%;
     height: 85%;
-    width: 100%;
-    z-index: 5;
-    background-color: #ccc;
   }
   /*Buttons*/
   #learn{
@@ -83,5 +78,13 @@
   #create{
   
   }
+
+/*Formatting button menus*/
+  .buttonMenu {
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    background-color: #ccc;
+}
   
-  /*Temp*/
+/*Temp*/
