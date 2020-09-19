@@ -1,39 +1,161 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    
-    <title>Trying to make learning website</title>
-    <link rel="stylesheet" href="css/main.css" type="text/css"/>
-    
-  </head>
-  <body>
-    
-    <!--Header-->
-    <div class='row bar header'>
-      <h3 class='col-8 headerText'>Welcome</h3>
-    </div>
-    
-    <!--Body-->
-    <div class='row buttonMenu mainBody'>
-      <button class='col-12' id='learn'>Learn</button>
-      <button class='col-12' id='create'>Create</button>
-    </div>
-    
-    <!--Footer-->
-    <div class='row bar footer'>
-      <p class='col-12 footerText'>Version 0.030</p>
-    </div>
-    
-    <!--Script-->
-    <script>
-      //Making buttons work
-      document.getElementById('learn').onclick = function() {
-        location.href = 'topics.html';
-      }
-      document.getElementById('create').onclick = function() {
-        location.href = 'create.html';
-      }
-    </script>
-    
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Resume</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Devicons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css"/>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">George Cherry</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" target="_blank" href="./assets/Curriculum Vitae.pdf">CV</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1>G<span class="text-primary">C</span></h1>
+                    <h1 class="mb-0">
+                        George 
+                        <span class="text-primary">Cherry</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        St Hugh's College, Oxford · <a href="mailto:georgeb.cherry@gmail.com">Georgeb.cherry@gmail.com</a> · <a href="./assets/Curriculum_Vitae.pdf">Curriculum Vitae</a>
+                    </div>
+                    <p class="lead mb-4">Hello! I'm George, a final year Physics (MPhys) undergraduate at the University of Oxford. I'm graduating summer 2021 and I'm looking for graduate roles in software engineering.</p>
+                    <p class="lead mb-5">Feel free to have a look through my projects on my <b><a href="https://github.com/georgecherry02">GitHub</a></b>.</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://linkedin.com/in/georgecherry"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/georgecherry02"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">University of Oxford</h3>
+                            <div class="subheading mb-3">Master of Physics (MPhys)</div>
+                            <div>Specialising in Lasers and Quantum Information Processing, and Particle Physics</div>
+                            <p>Predicted 2:1</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">October 2017 - July 2021</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Queen Elizabeth's Hospital, Bristol</h3>
+                            <div class="subheading mb-3">A Levels</div>
+                            <div>Mathematics, Further Mathematics, Physics, Chemistry</div>
+                            <p>Achieved: A*A*AA</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">September 2010 - August 2017</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Contract Software Engineer</h3>
+                            <div class="subheading mb-3">Univeristy of Oxford, Mathematics Department</div>
+                            <p>I designed an developed a browser-based game for a citizen science initiative for the Department of Mathematics at the University of Oxford. The game, Spotting Patterns, will be launching at the end of 2020 to support current research in Mathematical Biology, specifically the modelling of tumor-immune cells.</p>
+                            <p>In building this game, I implemented complex restrictions on user input and optimised algorithms with respect to time, achieving high game performance and a friendly user experience. I worked with multiple front-end frameworks to deliver the requested specifications. I am currently developing additional functionality to randomise the difficulty of the game's restrictions, allowing for a broader range of data to be collected.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2020 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Quantitative Research Intern</h3>
+                            <div class="subheading mb-3">QOMPLX</div>
+                            <p>I worked as a Quantitative Research intern for Q:INSURANCE at QOMPLX. In my role, I examined the competitive environment and industry trends of an international market to support the potential entry of a new insurance model. I also cleaned, contextualised and enriched Big Data by conducting in-depth research into sectors affecting the insured, providing a foundation for the model. I presented these findings to senior management.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2019 - October 2019</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Lead Software Engineer</h3>
+                            <div class="subheading mb-3">Varsity Careers Hub</div>
+                            <p>I led the technological development of graduate recruitment start-up, Varsity Careers Hub. This included full stack development, DevOps and database architecture for their web app. I balanced the differing requirements of multiple stakeholders by devising and implementing a new process to analyse their priorities. Collaborated closesly with cofounders to grow the userbase five-fold and introduce new clients to the platform. The company has since received investment.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2019 - October 2019</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Software Engineering Intern</h3>
+                            <div class="subheading mb-3">Gresham Tech</div>
+                            <p>In this role, I worked with behaviour-driven development principles in an Agile environment. I facilitated the migration of the company's test-tracking system by designing a code-editing program that moved, referenced and updated ID tags throughout the entire company's entire codebase. I also developed a program that would transfer custom Java annotations of test methods into test resports during the Maven Build Cycle. This resulted in improved efficiency of the company's management and development cycle.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2018 - October 2018</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-php"></i><span class="tech_description">PHP</span></li>
+                        <li class="list-inline-item"><i class="fab fa-java"></i><span class="tech_description">Java</span></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i><span class="tech_description">JS</span></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i><span class="tech_description">React</span></li>
+                        <li class="list-inline-item"><i class="devicon-cplusplus-plain"></i><span class="tech_description">C++</span></li>
+                        <li class="list-inline-item"><i class="fab fa-python"></i><span class="tech_description">Python</span></li>
+                        <li class="list-inline-item"><i class="fab fa-r-project"></i><span class="tech_description">R</span></li>
+                    </ul>
+                    <div class="subheading mb-3">Tools and Technologies</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-github"></i><span class="tech_description">Git</span></li>
+                        <li class="list-inline-item"><i class="devicon-mysql-plain"></i><span class="tech_description">MySQL</span></li>
+                        <li class="list-inline-item"><i class="fab fa-node-js"></i><span class="tech_description">Node.JS</span></li>
+                        <li class="list-inline-item"><i class="fab fa-aws"></i><span class="tech_description">AWS</span></li>
+                        <li class="list-inline-item"><i class="devicon-jquery-plain"></i><span class="tech_description">jQuery</span></li>
+                        <li class="list-inline-item"><i class="fab fa-jira"></i><span class="tech_description">Jira</span></li>
+                        <li class="list-inline-item"><i class="fab fa-jenkins"></i><span class="tech_description">Jenkins</span></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
